@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] float maxVelocity = 20;
 
+    private Transform cameraMain;
+
     int y = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        cameraMain = Camera.main.transform;
     }
 
     // Update is called once per frame
