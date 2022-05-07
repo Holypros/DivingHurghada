@@ -54,6 +54,11 @@ public class trashS : MonoBehaviour
 
 
     }
+    private void OnTriggerExit(Collider other)
+    {
+        button.gameObject.SetActive(false);
+        buttonIsCliked = false;
+    }
 
     public void buttonClicked()
     {
