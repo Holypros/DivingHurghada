@@ -46,13 +46,22 @@ public class trashS : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         text.gameObject.SetActive(false);
-        other.gameObject.CompareTag("trash");
-        button.gameObject.SetActive(true);
-        trash = other.gameObject;
-        text.gameObject.transform.position = trash.gameObject.transform.position;
-        buttonIsCliked = false;
+        if (other.gameObject.CompareTag("trash"))
+        {
+            button.gameObject.SetActive(true);
+            trash = other.gameObject;
+            text.gameObject.transform.position = trash.transform.position;
+            buttonIsCliked = false;
+        }
 
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("trash"))
+        {
+            button.gameObject.SetActive(false);
+        }
     }
 
     public void buttonClicked()

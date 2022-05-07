@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float speed = 5;
     [SerializeField] float maxVelocity = 20;
+    [SerializeField] float maxY = 7.5f;
+
 
     private Transform cameraMain;
 
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerMovement(int y)
     {
+        if (y == 1 && transform.position.y >= maxY) {
+            y = 0;
+        }
+
         Vector3 targrtVelocity = new Vector3(joystick.Horizontal, y * 0.5f, joystick.Vertical);
         targrtVelocity = transform.TransformDirection(targrtVelocity);
         targrtVelocity *= speed;
@@ -37,8 +43,6 @@ public class PlayerController : MonoBehaviour
         velocityChange.x = Mathf.Clamp(velocityChange.x, -maxVelocity, maxVelocity);
         velocityChange.z = Mathf.Clamp(velocityChange.z, -maxVelocity, maxVelocity);
         velocityChange.y = Mathf.Clamp(velocityChange.y, -maxVelocity, maxVelocity);
-
-        //velocityChange.y = 0;
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
     }
