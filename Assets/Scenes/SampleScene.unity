@@ -791,7 +791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1365624497}
-  text: {fileID: 1521821063}
   scoreT: {fileID: 1068288698}
 --- !u!1 &330585543
 GameObject:
@@ -871,7 +870,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.2378552, y: 0.0000000059022454, z: -7.620618e-10, w: 0.97130066}
+  m_LocalRotation: {x: 0.23785518, y: -0.000000021418368, z: 0.000000005029854, w: 0.97130066}
   m_LocalPosition: {x: 14.2, y: 12.309999, z: -24.514545}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1330,7 +1329,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6316965, y: 1}
+    m_SensorSize: {x: 1.765625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1402,8 +1401,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4379258
-  m_Center: {x: -0.0721986, y: 0, z: 0.17338361}
+  m_Radius: 1.5042185
+  m_Center: {x: -0.0721986, y: 0, z: 0.10709099}
 --- !u!23 &586972229
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1778,8 +1777,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4379258
-  m_Center: {x: -0.0721986, y: 0, z: 0.17338361}
+  m_Radius: 1.4825712
+  m_Center: {x: -0.027553014, y: 0, z: 0.17338361}
 --- !u!23 &746965026
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1979,8 +1978,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4379258
-  m_Center: {x: -0.0721986, y: 0, z: 0.17338361}
+  m_Radius: 1.6388029
+  m_Center: {x: -0.016177723, y: 0, z: 0.028527295}
 --- !u!23 &814836140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2267,7 +2266,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6316965, y: 1}
+    m_SensorSize: {x: 1.765625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2283,8 +2282,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837117607}
-  m_LocalRotation: {x: 0.23785515, y: 0.0000000045082365, z: -0.0000000011039905,
-    w: 0.97130066}
+  m_LocalRotation: {x: 0.23785514, y: -0.000000020979199, z: 0.000000005137452, w: 0.97130066}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2475,8 +2473,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4379258
-  m_Center: {x: -0.0721986, y: 0, z: 0.17338361}
+  m_Radius: 1.5707672
+  m_Center: {x: -0.0721986, y: 0, z: 0.04054223}
 --- !u!23 &1090697442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2744,8 +2742,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.5187219
-  m_Center: {x: 0.14236893, y: 0, z: 0.30715466}
+  m_Radius: 1.7321336
+  m_Center: {x: 0.14236893, y: 0, z: 0.09374295}
 --- !u!23 &1148190200
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3236,8 +3234,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.4448435
-  m_Center: {x: -0.5604921, y: 0, z: -0.41219166}
+  m_Radius: 2.9032788
+  m_Center: {x: -0.2284922, y: 0, z: -0.28575626}
 --- !u!23 &1337453776
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3625,7 +3623,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6316965, y: 1}
+    m_SensorSize: {x: 1.765625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3641,7 +3639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530858471}
-  m_LocalRotation: {x: 0.2554833, y: 0.00000001663536, z: -0.0000000043959423, w: 0.9668135}
+  m_LocalRotation: {x: 0.2554833, y: -0.00000001663536, z: 0.0000000043959423, w: 0.9668135}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3942,7 +3940,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.6316965, y: 1}
+    m_SensorSize: {x: 1.765625, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

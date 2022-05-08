@@ -8,7 +8,7 @@ public class trashS : MonoBehaviour
 {
     // Start is called before the first frame update 
     [SerializeField] Button button;
-    [SerializeField] TextMeshProUGUI text;
+  //  [SerializeField] TextMeshProUGUI text;
     [SerializeField] TextMeshProUGUI scoreT;
 
     GameObject trash;
@@ -19,7 +19,7 @@ public class trashS : MonoBehaviour
     void Start()
     {
         button.gameObject.SetActive(false);
-        text.gameObject.SetActive(false);
+      //  text.gameObject.SetActive(false);
         scoreT.text = ("Score:" + playerscore);
     }
 
@@ -30,13 +30,13 @@ public class trashS : MonoBehaviour
         // Debug.Log(text.gameObject.transform.position);
         // Debug.Log(textTimer); 
         scoreT.text = ("Score:" + playerscore);
-        if (buttonIsCliked)
-        {
-            text.gameObject.SetActive(true);
-            text.transform.position += new Vector3(0, 3, 0) * speed * Time.deltaTime;
+        //if (buttonIsCliked)
+        //{
+        //    text.gameObject.SetActive(true);
+        //    text.transform.position += new Vector3(0, 3, 0) * speed * Time.deltaTime;
 
-            //  Debug.Log(playerscore);
-        }
+        //    //  Debug.Log(playerscore);
+        //}
 
 
 
@@ -45,11 +45,11 @@ public class trashS : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        text.gameObject.SetActive(false);
+       // text.gameObject.SetActive(false);
         other.gameObject.CompareTag("trash");
         button.gameObject.SetActive(true);
         trash = other.gameObject;
-        text.gameObject.transform.position = trash.gameObject.transform.position;
+       // text.gameObject.transform.position = trash.gameObject.transform.position;
         buttonIsCliked = false;
 
 
