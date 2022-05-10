@@ -50,7 +50,7 @@ public class trashS : MonoBehaviour
         {
             button.gameObject.SetActive(true);
             trash = other.gameObject;
-            text.gameObject.transform.position = trash.transform.position;
+            text.gameObject.transform.localPosition = trash.transform.position;
             buttonIsCliked = false;
         }
 
