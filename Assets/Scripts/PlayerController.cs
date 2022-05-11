@@ -12,13 +12,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxVelocity = 20;
     [SerializeField] float maxY = 7.5f;
 
-
+    Transform playerTransform;
     private Transform cameraMain;
 
     int y = 0;
     // Start is called before the first frame update
     void Start()
     {
+        playerTransform = transform;
         cameraMain = Camera.main.transform;
     }
 
@@ -30,12 +31,12 @@ public class PlayerController : MonoBehaviour
 
     void HandlePlayerMovement(int y)
     {
-        if (y == 1 && transform.position.y >= maxY) {
+        if (y == 1 && playerTransform.position.y >= maxY) {
             y = 0;
         }
 
         Vector3 targrtVelocity = new Vector3(joystick.Horizontal, y * 0.5f, joystick.Vertical);
-        targrtVelocity = transform.TransformDirection(targrtVelocity);
+        targrtVelocity = playerTransform.TransformDirection(targrtVelocity);
         targrtVelocity *= speed;
 
         Vector3 velocity = rb.velocity;

@@ -12,16 +12,18 @@ public class DepthCalc : MonoBehaviour
     [SerializeField] float minY = -20f;
     [SerializeField] float playerLength = 2f;
 
+    Transform playerTransform;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerTransform = transform;
     }
 
     // Update is called once per frame
     void Update()
     {
-        bar.fillAmount = (transform.position.y - playerLength) / (maxY - minY);
-        depthTxt.text = (int) ((maxY - minY) - transform.position.y) + " m";
+        bar.fillAmount = (playerTransform.position.y - playerLength) / (maxY - minY);
+        depthTxt.text = (int) ((maxY - minY) - playerTransform.position.y) + " m";
     }
 }

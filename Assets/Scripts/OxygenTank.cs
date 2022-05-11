@@ -12,9 +12,14 @@ public class OxygenTank : MonoBehaviour
     [SerializeField] float oxygenGainRate = 0.05f;
     [SerializeField] float maxY = 6.8f;
 
+    Transform playerTransform;
+    private void Start()
+    {
+        playerTransform = transform;
+    }
     void Update()
     {
-        if (transform.position.y <= maxY)
+        if (playerTransform.position.y <= maxY)
         {
             if (bar.fillAmount > 0)
                 bar.fillAmount -= oxygenLossRate * Time.deltaTime;
