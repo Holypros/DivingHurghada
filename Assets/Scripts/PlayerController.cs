@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxVelocity = 20;
     [SerializeField] float maxY = 7.5f;
 
+    //public Vector3 velocity_reference;
+    public float velocity_reference_x;
+    public float velocity_reference_y;
+    public float velocity_reference_z;
 
     private Transform cameraMain;
 
@@ -45,6 +49,11 @@ public class PlayerController : MonoBehaviour
         velocityChange.y = Mathf.Clamp(velocityChange.y, -maxVelocity, maxVelocity);
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
+        //velocity_reference = velocityChange;
+        velocity_reference_x = rb.velocity.x;
+        velocity_reference_y = rb.velocity.y;
+        velocity_reference_z = rb.velocity.z;
     }
 
     public void IsButtonPressed(int value) {
