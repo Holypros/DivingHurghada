@@ -10,7 +10,7 @@ public class OxygenTank : MonoBehaviour
     [SerializeField] GameObject gameOvetTxt;
     [SerializeField] float oxygenLossRate = 0.03f;
     [SerializeField] float oxygenGainRate = 0.05f;
-    [SerializeField] float maxY = 6.8f;
+    [SerializeField] float maxY;
 
     Transform playerTransform;
     private void Start()
@@ -22,7 +22,7 @@ public class OxygenTank : MonoBehaviour
         if (playerTransform.position.y <= maxY)
         {
             if (bar.fillAmount > 0)
-                bar.fillAmount -= oxygenLossRate * Time.deltaTime;
+                bar.fillAmount -= oxygenLossRate * Time.deltaTime * (maxY - playerTransform.position.y);
             else
             {
                 Time.timeScale = 0;
