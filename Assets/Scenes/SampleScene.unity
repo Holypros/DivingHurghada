@@ -5036,6 +5036,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8872725776581834531, guid: 8645fca4db726694381eaab04f5aa168,
         type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872725776581834531, guid: 8645fca4db726694381eaab04f5aa168,
+        type: 3}
+      propertyPath: rotationSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 8872725776581834531, guid: 8645fca4db726694381eaab04f5aa168,
+        type: 3}
       propertyPath: player_velocity
       value: 
       objectReference: {fileID: 293955057}
