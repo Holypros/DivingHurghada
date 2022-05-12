@@ -42,7 +42,7 @@ public class CameraLook : MonoBehaviour
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, delta.x, 0f);
-        playerBody.Rotate(Vector3.up * delta.x * 2.5f);
+        playerBody.Rotate(Vector3.up * delta.x * 12.0f);
 
 
     }
