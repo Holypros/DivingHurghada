@@ -1154,7 +1154,7 @@ MonoBehaviour:
   rb: {fileID: 293955059}
   speed: 5
   maxVelocity: 20
-  maxY: 27.5
+  maxY: 27.2
   velocity_reference_x: 0
   velocity_reference_y: 0
   velocity_reference_z: 0
@@ -1238,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293955057}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.66, y: 27.48, z: 29.45}
+  m_LocalPosition: {x: -35.66, y: 27.1, z: 29.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1278,7 +1278,7 @@ MonoBehaviour:
   gameOvetTxt: {fileID: 1116989748}
   oxygenLossRate: 0.03
   oxygenGainRate: 0.05
-  maxY: 27.5
+  maxY: 27
 --- !u!114 &293955066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1293,9 +1293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bar: {fileID: 2102187587}
   depthTxt: {fileID: 1511950664}
-  maxY: 27.5
-  minY: 0
-  playerLength: 0
+  maxY: 27
+  minY: -60
+  playerLength: 2
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1374,8 +1374,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.23785524, y: -0.000000009136371, z: 0.0000000018553008, w: 0.9713006}
-  m_LocalPosition: {x: -35.66, y: 32.48, z: 20.650002}
+  m_LocalRotation: {x: 0.2378552, y: 0.000000015479161, z: -0.0000000034898529, w: 0.97130066}
+  m_LocalPosition: {x: -35.66, y: 32.1, z: 20.650002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1937,7 +1937,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7810457, y: 1}
+    m_SensorSize: {x: 2.4313726, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1953,7 +1953,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544939540}
-  m_LocalRotation: {x: 0.22019526, y: -0.000000018763767, z: 0.000000004235654, w: 0.9754558}
+  m_LocalRotation: {x: 0.22019519, y: -0.000000014535425, z: 0.000000003281164, w: 0.9754559}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2746,7 +2746,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7810457, y: 1}
+    m_SensorSize: {x: 2.4313726, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2762,7 +2762,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837117607}
-  m_LocalRotation: {x: 0.23785523, y: -0.000000008356226, z: 0.0000000020462994, w: 0.97130066}
+  m_LocalRotation: {x: 0.23785514, y: 0.000000014866555, z: -0.0000000036405678, w: 0.97130066}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4639,7 +4639,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7810457, y: 1}
+    m_SensorSize: {x: 2.4313726, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4655,7 +4655,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530858471}
-  m_LocalRotation: {x: 0.25548336, y: 0.000000008462291, z: -0.0000000022361855, w: 0.9668135}
+  m_LocalRotation: {x: 0.25548324, y: -1e-45, z: -0, w: 0.9668135}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4670,6 +4670,64 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 893838951}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1700336920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1995993068051884099, guid: fb0d84b28abfaa34288f154a74903284,
+    type: 3}
+  m_PrefabInstance: {fileID: 1048371565}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1700336924
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700336920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 104.4423, y: 32.68923, z: 55.924095}
+  m_Center: {x: -39.94575, y: 42.146786, z: -58.83765}
+--- !u!65 &1700336925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700336920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15.389069, y: 23.008001, z: 86.7997}
+  m_Center: {x: -91.45267, y: 11.504001, z: -43.39985}
+--- !u!65 &1700336926
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700336920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.367886, y: 27.499546, z: 86.7997}
+  m_Center: {x: -68.37793, y: 13.749773, z: -43.39985}
+--- !u!65 &1700336927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700336920}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 62.02652, y: 29.730927, z: 86.7997}
+  m_Center: {x: -21.809998, y: 16.025324, z: -43.39985}
 --- !u!1 &1762199742
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,7 +5197,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.7810457, y: 1}
+    m_SensorSize: {x: 2.4313726, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5221,7 +5279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1927933234}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35.66, y: 32.48, z: 20.650002}
+  m_LocalPosition: {x: -35.66, y: 32.1, z: 20.650002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
