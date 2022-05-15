@@ -1285,9 +1285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9a07f1a945d24449d3c9a77dccb8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygenLossRate: 0.03
-  oxygenGainRate: 0.05
-  maxY: 27
 --- !u!114 &293955066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4714,7 +4711,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530858471}
-  m_LocalRotation: {x: 0.2554832, y: -0.000000025243988, z: 0.0000000066707955, w: 0.9668135}
+  m_LocalRotation: {x: 0.25548324, y: 0.0000000038216346, z: -0.0000000010098771,
+    w: 0.9668135}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4913,6 +4911,9 @@ MonoBehaviour:
   ScoreText: {fileID: 1068288698}
   bar: {fileID: 791187979}
   gameOvetTxt: {fileID: 1116989748}
+  oxygenLossRate: 0.0003
+  oxygenGainRate: 0.05
+  maxY: 27
   Dbar: {fileID: 2102187587}
   depthTxt: {fileID: 1511950664}
   DmaxY: 27

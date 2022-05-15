@@ -6,8 +6,11 @@ using TMPro;
 
 public class OxygenTank : MonoBehaviour
 {
-    [SerializeField] float oxygenLossRate = 0.03f;
-    [SerializeField] float oxygenGainRate = 0.05f;
+    //[SerializeField] Image bar;
+    //[SerializeField] GameObject gameOvetTxt;
+    //[SerializeField] float oxygenLossRate = 0.03f;
+    //[SerializeField] float oxygenGainRate = 0.05f;
+    //[SerializeField] float maxY;
 
     Transform playerTransform;
     private void Start()
@@ -16,10 +19,10 @@ public class OxygenTank : MonoBehaviour
     }
     void Update()
     {
-        if (playerTransform.position.y <= GameManager.Instance.GetMaxY())
+        if (playerTransform.position.y <= UiManager.UiInstance.maxY)
         {
-            if (UiManager.UiInstance.OxygenBar.fillAmount > 0)
-                UiManager.UiInstance.OxygenBar.fillAmount -=oxygenLossRate * Time.deltaTime * (GameManager.Instance.GetMaxY() - playerTransform.position.y);
+            if (UiManager.UiInstance.bar.fillAmount > 0)
+                UiManager.UiInstance.bar.fillAmount -= UiManager.UiInstance.oxygenLossRate * Time.deltaTime * (UiManager.UiInstance.maxY - playerTransform.position.y);
             else
             {
                 Time.timeScale = 0;
@@ -28,7 +31,7 @@ public class OxygenTank : MonoBehaviour
         }
         else 
         {
-            UiManager.UiInstance.OxygenBar.fillAmount += oxygenGainRate * Time.deltaTime;
+            UiManager.UiInstance.bar.fillAmount += UiManager.UiInstance.oxygenGainRate * Time.deltaTime;
         }
     }
 }

@@ -8,18 +8,23 @@ public class UiManager : MonoBehaviour
 {
     // Start is called before the first frame update 
     public static UiManager UiInstance;
-    public Button CollectButton;
+    public Button button;
     public TextMeshProUGUI Text;
     public TextMeshProUGUI ScoreText;
 
-    public Image OxygenBar;
+    public Image bar;
     public GameObject gameOvetTxt;
-   
-    public Image DepthBar;
-    public TextMeshProUGUI DepthTxt;
-   
-    int Textspeed = 50;
-    bool ButtonIsCliked = false;
+    public float oxygenLossRate = 0.03f;
+    public float oxygenGainRate = 0.05f;
+    public float maxY;
+
+    public Image Dbar;
+    public TextMeshProUGUI depthTxt;
+    public float DmaxY;
+    public float DminY;
+    public float playerLength;
+    int speed = 50;
+    bool buttonIsCliked = false;
     private void Awake()
     {
 
@@ -34,7 +39,7 @@ public class UiManager : MonoBehaviour
     }
     void Start()
     {
-        UiInstance.CollectButton.gameObject.SetActive(false);
+        UiInstance.button.gameObject.SetActive(false);
         UiInstance.Text.gameObject.SetActive(false);
         UiInstance.ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
 
@@ -44,34 +49,34 @@ public class UiManager : MonoBehaviour
     void Update()
     {
         ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
-        if (ButtonIsCliked == true)
+        if (buttonIsCliked == true)
         {
             Text.gameObject.SetActive(true);
-            Text.transform.position += new Vector3(0, 3, 0) * Textspeed * Time.deltaTime;
+            Text.transform.position += new Vector3(0, 3, 0) * speed * Time.deltaTime;
             //  Debug.Log(playerscore);
         }
         if (TrashScript.Tinstance.IsTriggerd == true)
         {
 
-            CollectButton.gameObject.SetActive(true);
+            button.gameObject.SetActive(true);
 
 
         }
         if (TrashScript.Tinstance.IsTriggerd == false)
         {
-            CollectButton.gameObject.SetActive(false);
+            button.gameObject.SetActive(false);
         }
 
     }
     public void buttonClicked()
     {
         Debug.Log("Button");
-        CollectButton.gameObject.SetActive(false);
+        button.gameObject.SetActive(false);
         Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
         Text.gameObject.SetActive(true);
         Destroy(TrashScript.Tinstance.trash.gameObject);
         GameManager.Instance.AddTOScore(3);
-        ButtonIsCliked = true;
+        buttonIsCliked = true;
 
     }
 }
