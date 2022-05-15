@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,6 +6,9 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     static int Score = 0;
+    float maxY = 27.2f;
+    float minY = -60f;
+    public float playerLength;
 
     private void Awake()
     {
@@ -36,6 +37,32 @@ public class GameManager : MonoBehaviour
     public int GetScore()
     {
         return Score;
+    } 
+  public  void setMaxY(float depthmax)
+    {
+        maxY = depthmax;
+
+    } 
+  public  float GetMaxY()
+    {
+        return maxY;
+    } 
+  public  void SetMinY(float depthmin)
+    {
+        minY = depthmin;
+    } 
+   public float GetMinY()
+    {
+        return minY;
+    } 
+   public void SetPlayerLength(float PlayerLenght)
+    {
+        playerLength = PlayerLenght;
+
+    } 
+   public float GetPlayerLength()
+    {
+        return playerLength;
     }
 
 }

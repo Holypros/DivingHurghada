@@ -6,21 +6,19 @@ using TMPro;
 
 public class DepthCalc : MonoBehaviour
 {
-
-
     Transform playerTransform;
     float size;
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = transform;
-        size = UiManager.UiInstance.DmaxY - UiManager.UiInstance.DminY;
+        size = GameManager.Instance.GetMaxY() - GameManager.Instance.GetMinY();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UiManager.UiInstance.Dbar.fillAmount = (size - (UiManager.UiInstance.DmaxY - playerTransform.position.y)) / size;
-        UiManager.UiInstance.depthTxt.text = (int)(UiManager.UiInstance.DmaxY - playerTransform.position.y) + " m";
+        UiManager.UiInstance.DepthBar.fillAmount = (size - (GameManager.Instance.GetMaxY() - playerTransform.position.y)) / size;
+        UiManager.UiInstance.DepthTxt.text = (int)(GameManager.Instance.GetMaxY() - playerTransform.position.y) + " m";
     }
 }
