@@ -6,7 +6,11 @@ using TMPro;
 
 public class DepthCalc : MonoBehaviour
 {
-
+    [SerializeField] Image bar;
+    [SerializeField] TextMeshProUGUI depthTxt;
+    [SerializeField] float maxY;
+    [SerializeField] float minY;
+    [SerializeField] float playerLength;
 
     Transform playerTransform;
     float size;
@@ -14,13 +18,13 @@ public class DepthCalc : MonoBehaviour
     void Start()
     {
         playerTransform = transform;
-        size = UiManager.UiInstance.DmaxY - UiManager.UiInstance.DminY;
+        size = maxY - minY;
     }
 
     // Update is called once per frame
     void Update()
     {
-        UiManager.UiInstance.Dbar.fillAmount = (size - (UiManager.UiInstance.DmaxY - playerTransform.position.y)) / size;
-        UiManager.UiInstance.depthTxt.text = (int)(UiManager.UiInstance.DmaxY - playerTransform.position.y) + " m";
+        bar.fillAmount = (size - (maxY - playerTransform.position.y)) / size;
+        depthTxt.text = (int) (maxY - playerTransform.position.y) + " m";
     }
 }
