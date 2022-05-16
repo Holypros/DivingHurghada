@@ -34,9 +34,9 @@ public class UiManager : MonoBehaviour
     }
     void Start()
     {
-        UiInstance.CollectButton.gameObject.SetActive(false);
-        UiInstance.Text.gameObject.SetActive(false);
-        UiInstance.ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
+        CollectButton.gameObject.SetActive(false);
+       Text.gameObject.SetActive(false);
+        ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
 
     }
 

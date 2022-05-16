@@ -38,19 +38,19 @@ public class GameManager : MonoBehaviour
     {
         return Score;
     } 
-  public  void setMaxY(float depthmax)
-    {
-        maxY = depthmax;
+  //public  void setMaxY(float depthmax)
+  //  {
+  //      maxY = depthmax;
 
-    } 
+  //  } 
   public  float GetMaxY()
     {
         return maxY;
     } 
-  public  void SetMinY(float depthmin)
-    {
-        minY = depthmin;
-    } 
+  //public  void SetMinY(float depthmin)
+  //  {
+  //      minY = depthmin;
+  //  } 
    public float GetMinY()
     {
         return minY;
