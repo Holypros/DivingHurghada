@@ -26,7 +26,7 @@ public class AnimationScriptController : MonoBehaviour
         //PlayerReference = player_velocity_z.GetComponent<PlayerController>();
 
         animator = GetComponent<Animator>();
-        Debug.Log(animator);
+       
     }
 
     // Update is called once per frame
