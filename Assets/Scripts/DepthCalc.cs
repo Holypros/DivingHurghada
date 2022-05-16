@@ -14,8 +14,6 @@ public class DepthCalc : MonoBehaviour
 
     Transform playerTransform;
     float size;
-    //float maxY = 27.2f;
-    //float minY = -60f;
     // Start is called before the first frame update
     void Start()
     {
