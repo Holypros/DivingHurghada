@@ -66,12 +66,16 @@ public class UiManager : MonoBehaviour
     public void buttonClicked()
     {
       //  Debug.Log("Button");
-        CollectButton.gameObject.SetActive(false);
+       
         Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
         Text.gameObject.SetActive(true);
         Destroy(TrashScript.Tinstance.trash.gameObject);
         GameManager.Instance.AddTOScore(3);
         ButtonIsCliked = true;
+        CollectButton.gameObject.SetActive(false);
+        TrashScript.Tinstance.IsTriggerd = false;
+
+
 
     }
 }
