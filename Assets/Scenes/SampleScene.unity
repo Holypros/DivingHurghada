@@ -1133,7 +1133,6 @@ GameObject:
   - component: {fileID: 293955060}
   - component: {fileID: 293955059}
   - component: {fileID: 293955058}
-  - component: {fileID: 293955064}
   - component: {fileID: 293955065}
   - component: {fileID: 293955066}
   - component: {fileID: 293955067}
@@ -1253,18 +1252,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &293955064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293955057}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aad2fc1bcec8c2f47a2df1f609265fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &293955065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1277,7 +1264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9a07f1a945d24449d3c9a77dccb8a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oxygenLossRate: 0.03
+  oxygenLossRate: 0.0003
   oxygenGainRate: 0.05
 --- !u!114 &293955066
 MonoBehaviour:
@@ -1383,7 +1370,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.23785512, y: 0.000000008382907, z: -0.0000000020397637, w: 0.97130066}
+  m_LocalRotation: {x: 0.23785512, y: -0.000000008382909, z: 0.0000000020397632, w: 0.97130066}
   m_LocalPosition: {x: -8.9, y: 32.1, z: -18.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2914,7 +2901,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837117607}
-  m_LocalRotation: {x: 0.2378551, y: 0.0000000083562846, z: -0.0000000020463125, w: 0.97130066}
+  m_LocalRotation: {x: 0.2378551, y: -0.000000008356285, z: 0.0000000020463127, w: 0.97130066}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -26007,9 +25994,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1762199742}
-        m_TargetAssemblyTypeName: trashS, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 1762199747}
+        m_TargetAssemblyTypeName: UiManager, Assembly-CSharp
+        m_MethodName: buttonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

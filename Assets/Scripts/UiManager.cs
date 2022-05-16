@@ -65,7 +65,7 @@ public class UiManager : MonoBehaviour
     }
     public void buttonClicked()
     {
-        Debug.Log("Button");
+      //  Debug.Log("Button");
         CollectButton.gameObject.SetActive(false);
         Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
         Text.gameObject.SetActive(true);
