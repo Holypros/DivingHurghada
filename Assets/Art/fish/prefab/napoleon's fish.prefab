@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d9384e40be417fb49834c7f97c18e916, type: 3}
+  - {fileID: 2100000, guid: 455917a727ab80a4b9ce536a059c9880, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d9384e40be417fb49834c7f97c18e916, type: 3}
+  - {fileID: 2100000, guid: 455917a727ab80a4b9ce536a059c9880, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -463,7 +463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d9384e40be417fb49834c7f97c18e916, type: 3}
+  - {fileID: 2100000, guid: 455917a727ab80a4b9ce536a059c9880, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -577,6 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6951877070616869727}
+  - component: {fileID: 5762818727910799521}
   m_Layer: 0
   m_Name: napoleon's fish
   m_TagString: Untagged
@@ -593,7 +594,7 @@ Transform:
   m_GameObject: {fileID: 7724192263571333605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.4502995, y: 0.55852693, z: 3.472462}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2254039118425799116}
@@ -601,6 +602,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &5762818727910799521
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7724192263571333605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.7
+  m_Center: {x: 0, y: 0, z: -1.6}
 --- !u!1 &7966956867484276791
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +759,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: d9384e40be417fb49834c7f97c18e916, type: 3}
+  - {fileID: 2100000, guid: 455917a727ab80a4b9ce536a059c9880, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -45,12 +45,6 @@ public class FishFlockController : MonoBehaviour
     public MovementAxis movementAxis = MovementAxis.XYZ;
     [Tooltip("The prefab that will be instantiated to manipulate the fishes. If you are using instancing this is not going to be used.")]
     public GameObject prefab;
-    [Tooltip("Toggle this to use instancing or not.")]
-    public bool instanced = false;
-    [Tooltip("Instanced Material to be used to draw the fishes.")]
-    public Material fishInstancedMaterial;
-    [Tooltip("Mesh to be drawn when using instancing.")]
-    public Mesh fishMesh;
 
     [Tooltip("Draw the gizmos or debug lines on the scene view.")]
     public bool debugDraw = true;
@@ -122,12 +116,6 @@ public class FishFlockController : MonoBehaviour
 
         InitializeFishes();
 
-        if (instanced)
-        {
-            props = new MaterialPropertyBlock();
-            props.SetFloat("_UniqueID", Random.value);
-        }
-
         refreshFishCounter.Start(0.6f);
     }
 
@@ -173,12 +161,6 @@ public class FishFlockController : MonoBehaviour
             }
         }
 
-        if (instanced)
-        {
-            drawArgsBuffer = new ComputeBuffer(1, 5 * sizeof(uint), ComputeBufferType.IndirectArguments);
-            drawArgsBuffer.SetData(new uint[5] { fishMesh.GetIndexCount(0), (uint)fishesCount, 0, 0, 0 });
-        }
-
         currentFishesCount = fishesCount;
         oldFishesCount = currentFishesCount;
     }
@@ -186,15 +168,14 @@ public class FishFlockController : MonoBehaviour
     void CreateFishData()
     {
         fishesData = new FishBehaviour[currentFishesCount];
-        if (!instanced) fishesTransforms = new Transform[currentFishesCount];
+        fishesTransforms = new Transform[currentFishesCount];
 
         for (int i = 0; i < currentFishesCount; i++)
         {
             fishesData[i] = CreateBehaviour();
             fishesData[i].speed_offset = Random.value * 10.0f;
 
-            if (!instanced)
-                fishesTransforms[i] = Instantiate(prefab, fishesData[i].position, Quaternion.identity).transform;
+            fishesTransforms[i] = Instantiate(prefab, fishesData[i].position, Quaternion.identity).transform;
         }
 
         if (boxColliders.Length <= 0)
@@ -202,13 +183,6 @@ public class FishFlockController : MonoBehaviour
 
         collisionDataLength = boxColliders.Length <= 0 ? 0 : collisionData.Length;
 
-        if (instanced)
-        {
-            fishBuffer = new ComputeBuffer(currentFishesCount, sizeof(float) * 9);
-            fishBuffer.SetData(fishesData);
-
-            fishInstancedMaterial.SetBuffer("fishBuffer", fishBuffer);
-        }
     }
 
     void Start()
@@ -269,26 +243,20 @@ public class FishFlockController : MonoBehaviour
         var time = Time.time;
         var deltaTime = Time.deltaTime;
 
-        if (instanced)
-        {
-            fishInstancedMaterial.SetVector("offsetPosition", myTransform.position);
-        }
-
         for (int i = 0; i < currentFishesCount; i++)
         {
             FishBehaviour fish = fishesData[i];
 
-            Transform fish_transform = instanced ? null : fishesTransforms[i];
-            if (!instanced)
-            {
-                fish.position = fish_transform.position;
-            }
+            Transform fish_transform = fishesTransforms[i];
+
+            fish.position = fish_transform.position;
+
 
             if (movementAxis == MovementAxis.XY) fish.position.z = 0.0f;
             else if (movementAxis == MovementAxis.XZ) fish.position.y = 0.0f;
 
             var current_pos = fish.position;
-            var current_rot = instanced ? Quaternion.identity : fish_transform.rotation;
+            var current_rot = fish_transform.rotation;
 
             var noise = Mathf.PerlinNoise(time, fish.speed_offset) * 2.0f - 1.0f;
             var fish_velocity = fish.speed * (1.0f + noise * speedVariation);
@@ -324,40 +292,22 @@ public class FishFlockController : MonoBehaviour
             }
 
             var nearby_fishes_count = 1;
-            if (!instanced)
+            
+            for (int j = 0; j < currentFishesCount; j++)
             {
-                var nearbyBoids = Physics.OverlapSphere(current_pos, neighbourDistance, searchLayer);
-                foreach (var boid in nearbyBoids)
+                if (j == i) continue;
+
+                FishBehaviour other_fish = fishesData[j];
+
+                if ((current_pos - other_fish.position).magnitude < neighbourDistance)
                 {
-                    if (boid.gameObject == fish_transform.gameObject) continue;
+                    separation += GetSeparationVector(current_pos, other_fish.position);
+                    alignment += other_fish.velocity;
+                    cohesion += other_fish.position;
 
-                    // TODO
-                    // When boid is the player move away and faster 
-                    var t = boid.transform;
-                    separation += GetSeparationVector(current_pos, t.position);
-                    alignment += t.forward;
-                    cohesion += t.position;
+                    nearby_fishes_count++;
                 }
-
-                nearby_fishes_count = nearbyBoids.Length;
-            }
-            else
-            {
-                for (int j = 0; j < currentFishesCount; j++)
-                {
-                    if (j == i) continue;
-
-                    FishBehaviour other_fish = fishesData[j];
-
-                    if ((current_pos - other_fish.position).magnitude < neighbourDistance)
-                    {
-                        separation += GetSeparationVector(current_pos, other_fish.position);
-                        alignment += other_fish.velocity;
-                        cohesion += other_fish.position;
-
-                        nearby_fishes_count++;
-                    }
-                }
+                
             }
 
             var avg = 1.0f / nearby_fishes_count;
@@ -372,43 +322,18 @@ public class FishFlockController : MonoBehaviour
             else if (movementAxis == MovementAxis.XZ) velocity.y = 0.0f;
 
             var ip = Mathf.Exp(-fish.rot_speed * deltaTime);
-            if (!instanced)
-            {
-                fish.velocity = velocity.normalized;
-                var rotation = Quaternion.FromToRotation(Vector3.forward, velocity.normalized);
-                if (rotation != current_rot)
-                {
-                    fish_transform.rotation = Quaternion.Lerp(rotation, current_rot, ip);
-                }
-            }
-            else
-            {
-                fish.velocity = Vector3.Lerp((velocity.normalized), (fish.velocity.normalized), ip);
-            }
+            
+            fish.velocity = Vector3.Lerp((velocity.normalized), (fish.velocity.normalized), ip);
+            
 
-            fish.position += (instanced ? fish.velocity : fish_transform.forward) * (fish_velocity * deltaTime);
+            fish.position += fish_transform.forward * (fish_velocity * deltaTime);
 
-            if (!instanced) fish_transform.position = fish.position;
+            fish_transform.position = fish.position;
 
             fishesData[i] = fish;
         }
 
         //fishBuffer.SetData(fishesData);
-    }
-
-    private void LateUpdate()
-    {
-        if (instanced)
-        {
-            fishBuffer.SetData(fishesData);
-            instancingBounds.center = myTransform.position;
-
-            Graphics.DrawMeshInstancedIndirect(
-                fishMesh, 0, fishInstancedMaterial,
-                instancingBounds,
-                drawArgsBuffer, 0, props
-            );
-        }
     }
 
     Vector3 GetSeparationVector(Vector3 my_pos, Vector3 target_pos)
@@ -426,26 +351,19 @@ public class FishFlockController : MonoBehaviour
 
     void ClearAll()
     {
-        if (instanced)
+        for (int i = 0; i < fishesTransforms.Length; i++)
         {
-            if (fishBuffer != null) fishBuffer.Release();
-            if (drawArgsBuffer != null) drawArgsBuffer.Release();
-        }
-        else
-        {
-            for (int i = 0; i < fishesTransforms.Length; i++)
+            Transform t = fishesTransforms[i];
+
+            if (t)
             {
-                Transform t = fishesTransforms[i];
+                GameObject obj = t.gameObject;
+                obj.SetActive(false);
 
-                if (t)
-                {
-                    GameObject obj = t.gameObject;
-                    obj.SetActive(false);
-
-                    Destroy(obj, 0.3f);
-                }
+                Destroy(obj, 0.3f);
             }
         }
+        
     }
 
     void UpdateGroupAnchor()
