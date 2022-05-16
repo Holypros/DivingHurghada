@@ -7,20 +7,28 @@ using TMPro;
 public class DepthCalc : MonoBehaviour
 {
     Transform playerTransform;
+    UiManager instanceUI;
+
     float size;
-    //float maxY = 27.2f;
-    //float minY = -60f;
+    float maxY = 27.2f;
+    float minY = -60f;
+
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = transform;
-        size = GameManager.Instance.GetMaxY() - GameManager.Instance.GetMinY();
+        instanceUI = UiManager.UiInstance;
+
+        maxY = GameManager.Instance.GetMaxY();
+        minY = GameManager.Instance.GetMinY();
+
+        size = maxY - minY;
     }
 
     // Update is called once per frame
     void Update()
     {
-        UiManager.UiInstance.DepthBar.fillAmount = (size - (GameManager.Instance.GetMaxY() - playerTransform.position.y)) / size;
-        UiManager.UiInstance.DepthTxt.text = (int)(GameManager.Instance.GetMaxY() - playerTransform.position.y) + " m";
+        instanceUI.SetDepthAmount((size - (maxY - playerTransform.position.y)) / size);
+        instanceUI.SetDepthText((int)(maxY - playerTransform.position.y) + " m");
     }
 }

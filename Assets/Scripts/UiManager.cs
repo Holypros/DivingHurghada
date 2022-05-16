@@ -12,11 +12,11 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI Text;
     public TextMeshProUGUI ScoreText;
 
-    public Image OxygenBar;
-    public GameObject gameOvetTxt;
-   
-    public Image DepthBar;
-    public TextMeshProUGUI DepthTxt;
+    [SerializeField] Image OxygenBar;
+    [SerializeField] GameObject gameOvetTxt;
+
+    [SerializeField] Image DepthBar;
+    [SerializeField] TextMeshProUGUI DepthTxt;
 
     public Button catchButton;
     public TextMeshProUGUI congrats;
@@ -102,5 +102,35 @@ public class UiManager : MonoBehaviour
         catchButton.gameObject.SetActive(false);
         CreatureScript.Tinstance.IsTriggerd = false;
 
+    }
+
+    public void SetDepthAmount(float value) {
+        DepthBar.fillAmount = value;
+    }
+
+    public float GetDepthAmount()
+    {
+        return DepthBar.fillAmount;
+    }
+
+    public void SetDepthText(string txt)
+    {
+        DepthTxt.text = txt;
+    }
+
+    
+
+    public void SetOxygenAmount(float value)
+    {
+        OxygenBar.fillAmount = value;
+    }
+
+    public float GetOxygenAmount()
+    {
+        return OxygenBar.fillAmount;
+    }
+
+    public void ShowGameOverText() {
+        gameOvetTxt.SetActive(true);
     }
 }

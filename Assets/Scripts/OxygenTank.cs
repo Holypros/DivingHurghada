@@ -11,29 +11,34 @@ public class OxygenTank : MonoBehaviour
     [SerializeField] float oxygenGainRate = 0.05f;
 
     Transform playerTransform;
+    UiManager instanceUI;
+    float maxY;
+
     private void Start()
     {
         image.gameObject.SetActive(false);
         playerTransform = transform;
+        maxY = GameManager.Instance.GetMaxY();
+        instanceUI = UiManager.UiInstance;
     }
     void Update()
     {
-        if (playerTransform.position.y <= GameManager.Instance.GetMaxY())
+        if (playerTransform.position.y <= maxY)
         {
-            if (UiManager.UiInstance.OxygenBar.fillAmount > 0)
+            if (instanceUI.GetOxygenAmount() > 0)
             {
-                UiManager.UiInstance.OxygenBar.fillAmount -= oxygenLossRate * Time.deltaTime * (GameManager.Instance.GetMaxY() - playerTransform.position.y);
+                instanceUI.SetOxygenAmount(instanceUI.GetOxygenAmount() - (oxygenLossRate * Time.deltaTime * (maxY - playerTransform.position.y)));
                 image.gameObject.SetActive(true);
             }
             else
             {
                 Time.timeScale = 0;
-                UiManager.UiInstance.gameOvetTxt.SetActive(true);
+                instanceUI.ShowGameOverText();
             }
         }
         else 
         {
-            UiManager.UiInstance.OxygenBar.fillAmount += oxygenGainRate * Time.deltaTime;
+            instanceUI.SetOxygenAmount(instanceUI.GetOxygenAmount() + oxygenGainRate * Time.deltaTime);
             image.gameObject.SetActive(false);
         }
     }
