@@ -17,9 +17,13 @@ public class UiManager : MonoBehaviour
    
     public Image DepthBar;
     public TextMeshProUGUI DepthTxt;
+
+    public Button catchButton;
+    public TextMeshProUGUI congrats;
    
     int Textspeed = 50;
     bool ButtonIsCliked = false;
+    bool caughtCreature = false;
     private void Awake()
     {
 
@@ -35,9 +39,11 @@ public class UiManager : MonoBehaviour
     void Start()
     {
         CollectButton.gameObject.SetActive(false);
-       Text.gameObject.SetActive(false);
+        Text.gameObject.SetActive(false);
         ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
 
+        catchButton.gameObject.SetActive(false);
+        congrats.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,24 +54,35 @@ public class UiManager : MonoBehaviour
         {
             Text.gameObject.SetActive(true);
             Text.transform.position += new Vector3(0, 3, 0) * Textspeed * Time.deltaTime;
-            //  Debug.Log(playerscore);
         }
         if (TrashScript.Tinstance.IsTriggerd == true)
         {
-
             CollectButton.gameObject.SetActive(true);
-
-
         }
         if (TrashScript.Tinstance.IsTriggerd == false)
         {
             CollectButton.gameObject.SetActive(false);
         }
+        // creature
+        if(caughtCreature == true)
+        {
+            congrats.gameObject.SetActive(true);
+            congrats.transform.position += new Vector3(0, 3, 0) * 25 * Time.deltaTime;
+        }
+
+        if(CreatureScript.Tinstance.IsTriggerd == true)
+        {
+            catchButton.gameObject.SetActive(true);
+        }
+        if (CreatureScript.Tinstance.IsTriggerd == false)
+        {
+            catchButton.gameObject.SetActive(false);
+        }
+
 
     }
     public void buttonClicked()
     {
-      //  Debug.Log("Button");
        
         Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
         Text.gameObject.SetActive(true);
@@ -74,8 +91,16 @@ public class UiManager : MonoBehaviour
         ButtonIsCliked = true;
         CollectButton.gameObject.SetActive(false);
         TrashScript.Tinstance.IsTriggerd = false;
+    }
 
-
+    public void creatureClicked()
+    {
+        congrats.gameObject.transform.localPosition = CreatureScript.Tinstance.creature.transform.position;
+        congrats.gameObject.SetActive(true);
+        Destroy(CreatureScript.Tinstance.creature.gameObject);
+        caughtCreature = true;
+        catchButton.gameObject.SetActive(false);
+        CreatureScript.Tinstance.IsTriggerd = false;
 
     }
 }

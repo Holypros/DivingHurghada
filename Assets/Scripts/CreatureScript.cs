@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrashScript : MonoBehaviour
+public class CreatureScript : MonoBehaviour
 {
-    // Start is called before the first frame update 
-    public static TrashScript Tinstance;
+    public static CreatureScript Tinstance;
     [HideInInspector]
-    public GameObject trash;
+    public GameObject creature;
     [HideInInspector]
     public bool IsTriggerd = false;
     private void Awake()
@@ -22,26 +21,23 @@ public class TrashScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
-  
+
     private void OnTriggerEnter(Collider other)
     {
-
-        if (other.gameObject.CompareTag("trash"))
+        if (other.gameObject.CompareTag("creature"))
         {
             IsTriggerd = true;
-            trash = other.gameObject;
-
+            creature = other.gameObject;
         }
-
     }
+
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("trash"))
+        if (other.gameObject.CompareTag("creature"))
         {
             IsTriggerd = false;
 
         }
     }
-    // Update is called once per frame
 
 }
