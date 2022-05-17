@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class UiManager : MonoBehaviour
 
     public Button catchButton;
     public TextMeshProUGUI congrats;
+
+    public Button nextLevel;
+
+    public Animator transition;
+    public float transitionTime = 10.0f;
    
     int Textspeed = 50;
     bool ButtonIsCliked = false;
@@ -44,6 +50,7 @@ public class UiManager : MonoBehaviour
 
         catchButton.gameObject.SetActive(false);
         congrats.gameObject.SetActive(false);
+        nextLevel.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -101,7 +108,22 @@ public class UiManager : MonoBehaviour
         caughtCreature = true;
         catchButton.gameObject.SetActive(false);
         CreatureScript.Tinstance.IsTriggerd = false;
+        nextLevel.gameObject.SetActive(true);
 
+    }
+
+    public void transitionClicked()
+    {
+       StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 
     public void SetDepthAmount(float value) {
