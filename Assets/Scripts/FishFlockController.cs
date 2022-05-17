@@ -292,23 +292,19 @@ public class FishFlockController : MonoBehaviour
             }
 
             var nearby_fishes_count = 1;
-            
-            for (int j = 0; j < currentFishesCount; j++)
+
+            var nearbyBoids = Physics.OverlapSphere(current_pos, neighbourDistance, searchLayer);
+            foreach (var boid in nearbyBoids)
             {
-                if (j == i) continue;
+                if (boid.gameObject == fish_transform.gameObject) continue;
 
-                FishBehaviour other_fish = fishesData[j];
-
-                if ((current_pos - other_fish.position).magnitude < neighbourDistance)
-                {
-                    separation += GetSeparationVector(current_pos, other_fish.position);
-                    alignment += other_fish.velocity;
-                    cohesion += other_fish.position;
-
-                    nearby_fishes_count++;
-                }
-                
+                var t = boid.transform;
+                separation += GetSeparationVector(current_pos, t.position);
+                alignment += t.forward;
+                cohesion += t.position;
             }
+
+            nearby_fishes_count = nearbyBoids.Length;
 
             var avg = 1.0f / nearby_fishes_count;
             alignment *= avg;
@@ -322,9 +318,14 @@ public class FishFlockController : MonoBehaviour
             else if (movementAxis == MovementAxis.XZ) velocity.y = 0.0f;
 
             var ip = Mathf.Exp(-fish.rot_speed * deltaTime);
-            
-            fish.velocity = Vector3.Lerp((velocity.normalized), (fish.velocity.normalized), ip);
-            
+
+            fish.velocity = velocity.normalized;
+            var rotation = Quaternion.FromToRotation(Vector3.forward, velocity.normalized);
+            if (rotation != current_rot)
+            {
+                fish_transform.rotation = Quaternion.Lerp(rotation, current_rot, ip);
+            }
+
 
             fish.position += fish_transform.forward * (fish_velocity * deltaTime);
 
