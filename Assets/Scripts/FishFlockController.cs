@@ -15,13 +15,6 @@ public struct FishBehaviour
 
 public class FishFlockController : MonoBehaviour
 {
-    public enum MovementAxis
-    {
-        XYZ,
-        XY,
-        XZ,
-    };
-
     public struct CollisionArea
     {
         public Vector3 position;
@@ -41,8 +34,6 @@ public class FishFlockController : MonoBehaviour
     public float groupAreaHeight = 20;
     [Tooltip("The depth limit that the fishes will force themselves to swim inside.")]
     public float groupAreaDepth = 20;
-    [Tooltip("The movement axis of the fishes. This must be set before play mode to work properly.")]
-    public MovementAxis movementAxis = MovementAxis.XYZ;
     [Tooltip("The prefab that will be instantiated to manipulate the fishes. If you are using instancing this is not going to be used.")]
     public GameObject prefab;
 
@@ -68,12 +59,6 @@ public class FishFlockController : MonoBehaviour
     [Tooltip("In case you are not using instancing, this will cast a sphere and filter with this layer to find near fishes to each other.")]
     public LayerMask searchLayer;
 
-    [Header("Target Following")]
-    [Tooltip("Follow the specified target or not?")]
-    public bool followTarget = false;
-    [Tooltip("The transform target that the group will follow.")]
-    public Transform target;
-
     [Header("Random Target Points Following")]
     [Tooltip("Minimum target points that will randomly be generated to follow if not following a target.")]
     public int minTargetPoints = 5;
@@ -95,15 +80,9 @@ public class FishFlockController : MonoBehaviour
 
     Vector3 groupAnchor;
     Transform myTransform;
-    Bounds instancingBounds;
 
     public FishBehaviour[] fishesData;
     Transform[] fishesTransforms;
-
-    // Instanced data
-    ComputeBuffer fishBuffer;
-    ComputeBuffer drawArgsBuffer;
-    MaterialPropertyBlock props;
 
     int currentFishesCount;
     int oldFishesCount;
@@ -121,8 +100,6 @@ public class FishFlockController : MonoBehaviour
 
     void InitializeFishes()
     {
-        instancingBounds = new Bounds(myTransform.position, Vector3.one * 1000);
-
         int collidersLength = boxColliders.Length;
         if (boxColliders != null && collidersLength > 0)
         {
@@ -187,14 +164,9 @@ public class FishFlockController : MonoBehaviour
 
     void Start()
     {
-        if (followTarget)
-            groupAnchor = target.position;
-        else
-        {
-            GeneratePath();
-            groupAnchor = targetPositions[0];
-        }
-
+        GeneratePath();
+        groupAnchor = targetPositions[0];
+        
         CreateFishData();
     }
 
@@ -203,16 +175,6 @@ public class FishFlockController : MonoBehaviour
         FishBehaviour behaviour = new FishBehaviour();
         Vector3 pos = groupAnchor + Random.insideUnitSphere * spawnRadius;
         Quaternion rot = Quaternion.Slerp(transform.rotation, Random.rotation, 0.3f);
-
-        switch (movementAxis)
-        {
-            case MovementAxis.XY:
-                pos.z = rot.z = 0.0f;
-                break;
-            case MovementAxis.XZ:
-                pos.y = rot.y = 0.0f;
-                break;
-        }
 
         behaviour.position = pos;
         behaviour.velocity = rot.eulerAngles;
@@ -250,10 +212,6 @@ public class FishFlockController : MonoBehaviour
             Transform fish_transform = fishesTransforms[i];
 
             fish.position = fish_transform.position;
-
-
-            if (movementAxis == MovementAxis.XY) fish.position.z = 0.0f;
-            else if (movementAxis == MovementAxis.XZ) fish.position.y = 0.0f;
 
             var current_pos = fish.position;
             var current_rot = fish_transform.rotation;
@@ -314,9 +272,6 @@ public class FishFlockController : MonoBehaviour
             var velocity = separation + alignment + cohesion;
             velocity += avoidance;
 
-            if (movementAxis == MovementAxis.XY) velocity.z = 0.0f;
-            else if (movementAxis == MovementAxis.XZ) velocity.y = 0.0f;
-
             var ip = Mathf.Exp(-fish.rot_speed * deltaTime);
 
             fish.velocity = velocity.normalized;
@@ -325,7 +280,6 @@ public class FishFlockController : MonoBehaviour
             {
                 fish_transform.rotation = Quaternion.Lerp(rotation, current_rot, ip);
             }
-
 
             fish.position += fish_transform.forward * (fish_velocity * deltaTime);
 
@@ -380,7 +334,7 @@ public class FishFlockController : MonoBehaviour
 
         Vector3 futurePosition = myTransform.position;
 
-        if (!followTarget && targetPositions.Length > 0)
+        if (targetPositions.Length > 0)
         {
             if ((groupAnchor - targetPositions[currentTargetPosIndex]).magnitude < 1)
             {
@@ -398,14 +352,7 @@ public class FishFlockController : MonoBehaviour
             Vector3 vel = (targetPositions[currentTargetPosIndex] - groupAnchor);
             futurePosition = groupAnchor + vel * Time.deltaTime * groupAreaSpeed;
         }
-        else if (followTarget)
-        {
-            if (target != null)
-            {
-                Vector3 vel = (target.position - groupAnchor);
-                futurePosition = groupAnchor + vel * Time.deltaTime * groupAreaSpeed;
-            }
-        }
+        
 
         futurePosition.x = Mathf.Clamp(futurePosition.x, minX, maxX);
         futurePosition.y = Mathf.Clamp(futurePosition.y, minY, maxY);
@@ -468,7 +415,7 @@ public class FishFlockController : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(Application.isPlaying ? groupAnchor : transform.position, volumeSize);
 
-        if (Application.isPlaying && !followTarget)
+        if (Application.isPlaying)
         {
             Gizmos.color = Color.green;
             for (int i = 0; i < targetPositions.Length - 1; i++)

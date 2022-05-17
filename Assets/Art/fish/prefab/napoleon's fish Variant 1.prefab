@@ -7,6 +7,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 487220149352526928, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 574208011298950390, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358565211897037936, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3924087521491821669, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045380028579561783, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385647754548015034, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5762818727910799521, guid: b67ed4e03bff7a9469bb25f20ae93453,
         type: 3}
       propertyPath: m_Radius
@@ -21,6 +51,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: -1.5546513
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166248242237995637, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679868776340869417, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6951877070616869727, guid: b67ed4e03bff7a9469bb25f20ae93453,
         type: 3}
@@ -101,6 +141,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: napoleon's fish Variant 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7724192263571333605, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7966956867484276791, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8897204456343136811, guid: b67ed4e03bff7a9469bb25f20ae93453,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b67ed4e03bff7a9469bb25f20ae93453, type: 3}
