@@ -18,14 +18,15 @@ public class PlayerController : MonoBehaviour
     public float velocity_reference_z;
 
     Transform playerTransform;
+    [SerializeField]
     private Transform cameraMain;
 
     int y = 0;
+
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = transform;
-        cameraMain = Camera.main.transform;
     }
 
     // Update is called once per frame
@@ -41,7 +42,9 @@ public class PlayerController : MonoBehaviour
         }
 
         Vector3 targrtVelocity = new Vector3(joystick.Horizontal, y * 0.5f, joystick.Vertical);
-        targrtVelocity = playerTransform.TransformDirection(targrtVelocity);
+
+        targrtVelocity = Quaternion.AngleAxis(cameraMain.rotation.eulerAngles.y, Vector3.up) * targrtVelocity;
+
         targrtVelocity *= speed;
 
         Vector3 velocity = rb.velocity;
@@ -51,6 +54,7 @@ public class PlayerController : MonoBehaviour
         velocityChange.y = Mathf.Clamp(velocityChange.y, -maxVelocity, maxVelocity);
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
+
 
         //velocity_reference = velocityChange;
         velocity_reference_x = rb.velocity.x;
