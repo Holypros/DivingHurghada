@@ -29,7 +29,10 @@ public class UiManager : MonoBehaviour
    
     int Textspeed = 50;
     bool ButtonIsCliked = false;
-    bool caughtCreature = false;
+   
+    [HideInInspector]
+     public int clicked=0;
+   public bool caughtCreature = false; 
     private void Awake()
     {
 
@@ -90,26 +93,24 @@ public class UiManager : MonoBehaviour
     }
     public void buttonClicked()
     {
+
+        
+        
+            Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
+            Text.gameObject.SetActive(true);
+            Destroy(TrashScript.Tinstance.trash.gameObject);
+            GameManager.Instance.AddTOScore(3);
+            ButtonIsCliked = true;
+            CollectButton.gameObject.SetActive(false);
+            TrashScript.Tinstance.IsTriggerd = false;
        
-        Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
-        Text.gameObject.SetActive(true);
-        Destroy(TrashScript.Tinstance.trash.gameObject);
-        GameManager.Instance.AddTOScore(3);
-        ButtonIsCliked = true;
-        CollectButton.gameObject.SetActive(false);
-        TrashScript.Tinstance.IsTriggerd = false;
     }
 
     public void creatureClicked()
     {
-        congrats.gameObject.transform.localPosition = CreatureScript.Tinstance.creature.transform.position;
-        congrats.gameObject.SetActive(true);
-        Destroy(CreatureScript.Tinstance.creature.gameObject);
-        caughtCreature = true;
-        catchButton.gameObject.SetActive(false);
-        CreatureScript.Tinstance.IsTriggerd = false;
-        nextLevel.gameObject.SetActive(true);
-
+        
+        clicked++;
+        Debug.Log(clicked);
     }
 
     public void transitionClicked()

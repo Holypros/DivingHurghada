@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     float maxY = 27.2f;
     float minY = -60f;
     public float playerLength;
+    //[HideInInspector]
+    //public int CreatureMovementCounter=0;
 
     private void Awake()
     {
@@ -60,9 +62,19 @@ public class GameManager : MonoBehaviour
         playerLength = PlayerLenght;
 
     } 
-   public float GetPlayerLength()
+   public float GetPlayerLength() 
     {
         return playerLength;
     }
+    //public void trans()
+    //{
+    //    UiManager.UiInstance.congrats.gameObject.transform.localPosition = CreatureScript.Tinstance.creature.transform.position;
+    //    UiManager.UiInstance.congrats.gameObject.SetActive(true);
+    //    Destroy(CreatureScript.Tinstance.creature.gameObject);
+    //    UiManager.UiInstance.caughtCreature = true;
+    //    UiManager.UiInstance.catchButton.gameObject.SetActive(false);
+    //    CreatureScript.Tinstance.IsTriggerd = false;
+    //    UiManager.UiInstance.nextLevel.gameObject.SetActive(true);
+    //}
 
 }
