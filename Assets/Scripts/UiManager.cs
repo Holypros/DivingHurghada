@@ -29,6 +29,8 @@ public class UiManager : MonoBehaviour
    
     int Textspeed = 50;
     bool ButtonIsCliked = false;
+
+    public static bool GameIsPaused = false;
    
     [HideInInspector]
      public int clicked=0;
@@ -92,23 +94,18 @@ public class UiManager : MonoBehaviour
 
     }
     public void buttonClicked()
-    {
-
-        
-        
+    {        
             Text.gameObject.transform.localPosition = TrashScript.Tinstance.trash.transform.position;
             Text.gameObject.SetActive(true);
             Destroy(TrashScript.Tinstance.trash.gameObject);
             GameManager.Instance.AddTOScore(3);
             ButtonIsCliked = true;
             CollectButton.gameObject.SetActive(false);
-            TrashScript.Tinstance.IsTriggerd = false;
-       
+            TrashScript.Tinstance.IsTriggerd = false;    
     }
 
     public void creatureClicked()
-    {
-        
+    {       
         clicked++;
         Debug.Log(clicked);
     }
@@ -118,6 +115,8 @@ public class UiManager : MonoBehaviour
        StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
+
+
     IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("Start");
@@ -126,6 +125,29 @@ public class UiManager : MonoBehaviour
 
         SceneManager.LoadScene(levelIndex);
     }
+
+
+
+
+    public void Resume()
+    {
+        Time.timeScale = 1f;
+        GameIsPaused = true;
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        GameIsPaused = true;
+
+    }
+
+    public void MenuClicked()
+    {
+        Time.timeScale = 1f;
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+    }
+
 
     public void SetDepthAmount(float value) {
         DepthBar.fillAmount = value;
