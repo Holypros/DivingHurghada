@@ -19,8 +19,6 @@ public class creature : MonoBehaviour
         }
     }
     public PathCreator Cpath;
-    float speedc = 5;
-    float pathdistance = 5;
      public GameObject player;
     //public PathCreator refScript;
     //PathFollower
