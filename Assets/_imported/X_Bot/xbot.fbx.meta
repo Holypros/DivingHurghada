@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: 19688f533d83717428e61fdf86609982
+guid: c4df58446ee3f4e44b54d8760270d666
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Take 001
   - first:
       74: -203655887218126122
     second: mixamo.com
@@ -13,13 +10,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Alpha_Body_MAT
-    second: {fileID: 2100000, guid: 25bfda2005e7b4da191fe6693ad9954b, type: 2}
+      name: Beta_Joints_MAT
+    second: {fileID: 2100000, guid: 25105012909ef7e4eb4bee15aeb6b931, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Alpha_Joints_MAT
-    second: {fileID: 2100000, guid: 2dfe3552daa9446ecb5a5c45ee50b899, type: 2}
+      name: asdf1_Beta_HighLimbsGeoSG2
+    second: {fileID: 2100000, guid: 2c2c5c8b6d466fa418143bf6c6a752e0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -91,7 +88,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 71e23d3a36c2d85468f3a76e2495131f
+  - cd3f8e6ca6847c44a8b2c98dc4ec11c7
+  - e9088ad1576b4b54abc0203938244d70
+  - e02a09e81adb5e64ab5187ef213348e1
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
