@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 221588957549993890}
   - component: {fileID: 562376146553956298}
   - component: {fileID: 3992013793427842469}
+  - component: {fileID: 735129021722572678}
   m_Layer: 5
   m_Name: SkinPanel
   m_TagString: Untagged
@@ -289,6 +290,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &735129021722572678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5461193826206015205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e6922fe28642746bad722c089b215b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7912360185723467494
 GameObject:
   m_ObjectHideFlags: 0
