@@ -7,12 +7,16 @@ public class ChangeMaterial : MonoBehaviour
     public Material[] material;
     Material setMaterial;
     Renderer rend;
-
+    //[SerializeField] GameObject player;
     void Start()
     {
+        //GameObject prefab = Resources.Load<GameObject>("Animations/X Bot/Materials/3_asdf1_Beta_HighLimbsGeoSG2 1.mat"); // Path WITHOUT "Resources/"
         rend = GetComponent<Renderer>();
         rend.enabled = true;
-        rend.sharedMaterial = material[0];
+        
+        rend.sharedMaterial = material[0]; 
+     
+        //prefab = material[0];
     }
 
     // Update is called once per frame
