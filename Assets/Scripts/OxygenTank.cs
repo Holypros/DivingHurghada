@@ -5,8 +5,8 @@ using TMPro;
 
 public class OxygenTank : MonoBehaviour
 {
-    
-    [SerializeField] float oxygenLossRate = 0.03f;
+
+    //[SerializeField] float oxygenLossRate = 0.0003f;
     [SerializeField] float oxygenGainRate = 0.05f;
 
     Transform playerTransform;
@@ -25,8 +25,8 @@ public class OxygenTank : MonoBehaviour
         {
             if (instanceUI.GetOxygenAmount() > 0)
             {
-                instanceUI.SetOxygenAmount(instanceUI.GetOxygenAmount() - (oxygenLossRate * Time.deltaTime * (maxY - playerTransform.position.y)));
-               
+                instanceUI.SetOxygenAmount(instanceUI.GetOxygenAmount() - (GameManager.Instance.GetOxygenTank() * Time.deltaTime * (maxY - playerTransform.position.y)));
+
             }
             else
             {
@@ -34,10 +34,12 @@ public class OxygenTank : MonoBehaviour
                 instanceUI.ShowGameOverText();
             }
         }
-        else 
+        else
         {
             instanceUI.SetOxygenAmount(instanceUI.GetOxygenAmount() + oxygenGainRate * Time.deltaTime);
-            
+
         }
     }
+
+
 }

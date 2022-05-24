@@ -5,7 +5,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public static GameManager Instance;
 
-    static int Score = 0;
+    float oxygenLossRate = 0.0003f;
+     int Score = 0;
     float maxY = 27.2f;
     float minY = -60f;
     public float playerLength;
@@ -18,11 +19,15 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+
+            
         }
-        else
+        else if( Instance !=this)
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
+        DontDestroyOnLoad(this);
+
     }
 
     public void AddTOScore(int score)
@@ -34,7 +39,14 @@ public class GameManager : MonoBehaviour
 
     public void MinusFromSCore(int score)
     {
-        Score -= score;
+        if (Score - score < 0)
+        {
+            Debug.Log("Score is less than zero");
+        }
+        else 
+        {
+            Score -= score;
+        }
     }
     public int GetScore()
     {
@@ -66,6 +78,17 @@ public class GameManager : MonoBehaviour
     {
         return playerLength;
     }
+
+    public void UpgradeOxygenTank(float value)
+    {
+        oxygenLossRate = value;
+    }
+
+    public float GetOxygenTank()
+    {
+        return oxygenLossRate;
+    }
+}
     //public void trans()
     //{
     //    UiManager.UiInstance.congrats.gameObject.transform.localPosition = CreatureScript.Tinstance.creature.transform.position;
@@ -77,4 +100,3 @@ public class GameManager : MonoBehaviour
     //    UiManager.UiInstance.nextLevel.gameObject.SetActive(true);
     //}
 
-}
