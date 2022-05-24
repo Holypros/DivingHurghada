@@ -41,11 +41,14 @@ public class UiManager : MonoBehaviour
         if (UiInstance == null)
         {
             UiInstance = this;
+
+
         }
-        else
+        else if (UiInstance != this)
         {
-            Destroy(gameObject);
+            Destroy(this);
         }
+        DontDestroyOnLoad(this);
     }
     void Start()
     {

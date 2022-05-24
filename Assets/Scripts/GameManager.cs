@@ -28,7 +28,11 @@ public class GameManager : MonoBehaviour
         }
         DontDestroyOnLoad(this);
 
+        PlayerPrefs.SetInt("Score", Score);
+        PlayerPrefs.GetInt("Score");
+
     }
+  
 
     public void AddTOScore(int score)
     {
