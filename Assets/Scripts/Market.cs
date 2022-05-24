@@ -17,9 +17,11 @@ public class Market : MonoBehaviour
     [SerializeField] TextMeshProUGUI skinCostTxt;
     [SerializeField] TextMeshProUGUI oxygenUpgradeTxt;
 
+    [SerializeField] Button defaultSkinBtn;
+    [SerializeField] Button maleCharacterBtn;
+    [SerializeField] Button femaleCharacterBtn;
     [SerializeField] Button skinChangingBtn;
     [SerializeField] Button upgradingOxygenBtn;
-    [SerializeField] Button defaultSkinBtn;
 
     [SerializeField] GameObject skinItem;
     [SerializeField] GameObject oxygenItem;
@@ -27,8 +29,8 @@ public class Market : MonoBehaviour
     [SerializeField] GameObject itemsYouHave;
     [SerializeField] GameObject itemsYouDontHave;
 
-    int skinCost = 1, oxygenUpgrade = 2;
-    bool defaultSkin = true;
+    int skinCost = 0, oxygenUpgrade = 0;
+    bool defaultSkin = true, maleCharacter = true;
 
     Items currentSelection;
     private void Start()
@@ -37,9 +39,14 @@ public class Market : MonoBehaviour
         oxygenUpgradeTxt.text = oxygenUpgrade + " Coin";
 
         defaultSkinBtn.interactable = false;
+        maleCharacterBtn.interactable = false;
 
         defaultSkinBtn.onClick.AddListener(ChangeSkin);
         skinChangingBtn.onClick.AddListener(ChangeSkinClicked);
+
+        maleCharacterBtn.onClick.AddListener(ChangeCharacter);
+        femaleCharacterBtn.onClick.AddListener(ChangeCharacter);
+
 
         if (skinCost > GameManager.Instance.GetScore())
         {
@@ -120,6 +127,22 @@ public class Market : MonoBehaviour
             defaultSkin = true;
             Debug.Log("default");
 
+        }
+    }
+
+    public void ChangeCharacter()
+    {
+        if (maleCharacter)
+        {
+            femaleCharacterBtn.interactable = false;
+            maleCharacterBtn.interactable = true;
+            maleCharacter = false;
+        }
+        else
+        {
+            femaleCharacterBtn.interactable = true;
+            maleCharacterBtn.interactable = false;
+            maleCharacter = true;
         }
     }
 }
