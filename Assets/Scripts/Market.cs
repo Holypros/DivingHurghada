@@ -17,8 +17,9 @@ public class Market : MonoBehaviour
     [SerializeField] TextMeshProUGUI skinCostTxt;
     [SerializeField] TextMeshProUGUI oxygenUpgradeTxt;
 
-    [SerializeField] Button skinChanging;
-    [SerializeField] Button upgradingOxygen;
+    [SerializeField] Button skinChangingBtn;
+    [SerializeField] Button upgradingOxygenBtn;
+    [SerializeField] Button defaultSkinBtn;
 
     [SerializeField] GameObject skinItem;
     [SerializeField] GameObject oxygenItem;
@@ -26,7 +27,8 @@ public class Market : MonoBehaviour
     [SerializeField] GameObject itemsYouHave;
     [SerializeField] GameObject itemsYouDontHave;
 
-    int skinCost = 100, oxygenUpgrade = 0;
+    int skinCost = 1, oxygenUpgrade = 2;
+    bool defaultSkin = true;
 
     Items currentSelection;
     private void Start()
@@ -34,13 +36,18 @@ public class Market : MonoBehaviour
         skinCostTxt.text = skinCost + " Coin";
         oxygenUpgradeTxt.text = oxygenUpgrade + " Coin";
 
+        defaultSkinBtn.interactable = false;
+
+        defaultSkinBtn.onClick.AddListener(ChangeSkin);
+        skinChangingBtn.onClick.AddListener(ChangeSkinClicked);
+
         if (skinCost > GameManager.Instance.GetScore())
         {
-            skinChanging.interactable = false;
+            skinChangingBtn.interactable = false;
         }
         if (oxygenUpgrade > GameManager.Instance.GetScore())
         {
-            upgradingOxygen.interactable = false;
+            upgradingOxygenBtn.interactable = false;
         }
     }
     
@@ -49,12 +56,12 @@ public class Market : MonoBehaviour
         UpdateScore();
     }
 
-    public void UpgradeTank() {
+    public void UpgradeTankClicked() {
         confirmationPanel.SetActive(true);
         currentSelection = Items.OxygenUpgrading;
     }
 
-    public void ChangeSkin() {
+    public void ChangeSkinClicked() {
         confirmationPanel.SetActive(true);
         currentSelection = Items.SkinChanging;
     }
@@ -74,6 +81,7 @@ public class Market : MonoBehaviour
             GameManager.Instance.UpgradeOxygenTank(30);
             UpdateScore();
             oxygenItem.transform.SetParent(itemsYouHave.transform);
+            upgradingOxygenBtn.interactable = false;
             oxygenUpgradeTxt.enabled = false;
         }
 
@@ -81,7 +89,10 @@ public class Market : MonoBehaviour
         {
             GameManager.Instance.MinusFromSCore(skinCost);
             UpdateScore();
-            skinItem.transform.parent.SetParent(itemsYouHave.transform);
+            skinItem.transform.SetParent(itemsYouHave.transform);
+            skinChangingBtn.onClick.RemoveListener(ChangeSkinClicked);
+            skinChangingBtn.onClick.AddListener(ChangeSkin);
+
             skinCostTxt.enabled = false;
 
         }
@@ -90,5 +101,25 @@ public class Market : MonoBehaviour
     public void CancelClicked()
     {
         confirmationPanel.SetActive(false);
+    }
+
+    public void ChangeSkin() 
+    {
+        if (defaultSkin)
+        {
+            skinChangingBtn.interactable = false;
+            defaultSkinBtn.interactable = true;
+            defaultSkin = false;
+            Debug.Log("not default");
+
+        }
+        else 
+        {
+            skinChangingBtn.interactable = true;
+            defaultSkinBtn.interactable = false;
+            defaultSkin = true;
+            Debug.Log("default");
+
+        }
     }
 }
