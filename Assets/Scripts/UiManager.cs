@@ -145,7 +145,14 @@ public class UiManager : MonoBehaviour
     public void MenuClicked()
     {
         Time.timeScale = 1f;
-        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        if (SceneManager.GetActiveScene().buildIndex == 1) 
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 1));
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
+        }       
     }
 
 
