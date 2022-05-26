@@ -16,18 +16,30 @@ public class SwitchCharacterScript : MonoBehaviour
 	{
 
 		// anable first avatar and disable others
-		avatar1.gameObject.SetActive(true);
+		/*avatar1.gameObject.SetActive(true);
 
 		avatar2.gameObject.SetActive(false);
 		avatar3.gameObject.SetActive(false);
 		avatar4.gameObject.SetActive(false);
 		avatar5.gameObject.SetActive(false);
-		avatar6.gameObject.SetActive(false);
+		avatar6.gameObject.SetActive(false);*/
 	}
 
-	// public method to switch avatars by pressing UI button
-	public void SwitchAvatar()
+    private void OnEnable()
+    {
+		Debug.Log(GameManager.Instance.GetAvatar());
+		SwitchAvatar(GameManager.Instance.GetAvatar());
+    }
+    // public method to switch avatars by pressing UI button
+    public void SwitchAvatar(int whichAvatarIsOn)
 	{
+		avatar1.gameObject.SetActive(false);
+		avatar2.gameObject.SetActive(false);
+		avatar3.gameObject.SetActive(false);
+		avatar4.gameObject.SetActive(false);
+		avatar5.gameObject.SetActive(false);
+		avatar6.gameObject.SetActive(false);
+
 
 		// processing whichAvatarIsOn variable
 		switch (whichAvatarIsOn)
@@ -39,14 +51,7 @@ public class SwitchCharacterScript : MonoBehaviour
 				whichAvatarIsOn = 1;
 
 				// Enable First and disable all others
-				avatar1.gameObject.SetActive(false);
-
-				avatar2.gameObject.SetActive(false);
-				avatar3.gameObject.SetActive(false);
-				avatar4.gameObject.SetActive(false);
-				avatar5.gameObject.SetActive(false);
-				avatar6.gameObject.SetActive(false);
-
+				avatar1.gameObject.SetActive(true);
 				break;
 
 			// if the second avatar is on
@@ -57,13 +62,6 @@ public class SwitchCharacterScript : MonoBehaviour
 
 				// Enable second and disable all others
 				avatar2.gameObject.SetActive(true);
-
-				avatar1.gameObject.SetActive(false);
-				avatar3.gameObject.SetActive(false);
-				avatar4.gameObject.SetActive(false);
-				avatar5.gameObject.SetActive(false);
-				avatar6.gameObject.SetActive(false);
-
 				break;
 
 			// if the third avatar is on
@@ -74,13 +72,6 @@ public class SwitchCharacterScript : MonoBehaviour
 
 				// Enable third and disable all others
 				avatar3.gameObject.SetActive(true);
-
-				avatar1.gameObject.SetActive(false);
-				avatar2.gameObject.SetActive(false);
-				avatar4.gameObject.SetActive(false);
-				avatar5.gameObject.SetActive(false);
-				avatar6.gameObject.SetActive(false);
-
 				break;
 
 			// if the fourth avatar is on
@@ -91,13 +82,6 @@ public class SwitchCharacterScript : MonoBehaviour
 
 				// Enable fourth and disable all others
 				avatar4.gameObject.SetActive(true);
-
-				avatar1.gameObject.SetActive(false);
-				avatar2.gameObject.SetActive(false);
-				avatar3.gameObject.SetActive(false);
-				avatar5.gameObject.SetActive(false);
-				avatar6.gameObject.SetActive(false);
-
 				break;
 
 			case 5:
@@ -108,12 +92,6 @@ public class SwitchCharacterScript : MonoBehaviour
 				// Enable fifth and disable all others
 				avatar5.gameObject.SetActive(true);
 
-				avatar1.gameObject.SetActive(false);
-				avatar2.gameObject.SetActive(false);
-				avatar3.gameObject.SetActive(false);
-				avatar4.gameObject.SetActive(false);
-				avatar6.gameObject.SetActive(false);
-
 				break;
 
 			case 6:
@@ -123,13 +101,6 @@ public class SwitchCharacterScript : MonoBehaviour
 
 				// Enable sixth and disable all others
 				avatar6.gameObject.SetActive(true);
-
-				avatar1.gameObject.SetActive(false);
-				avatar2.gameObject.SetActive(false);
-				avatar3.gameObject.SetActive(false);
-				avatar4.gameObject.SetActive(false);
-				avatar5.gameObject.SetActive(false);
-
 				break;
 
 		}

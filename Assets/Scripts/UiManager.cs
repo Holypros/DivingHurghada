@@ -48,7 +48,7 @@ public class UiManager : MonoBehaviour
         {
             Destroy(this);
         }
-        DontDestroyOnLoad(this);
+        //DontDestroyOnLoad(this);
     }
     void Start()
     {

@@ -25,7 +25,7 @@ public class OxygenTank : MonoBehaviour
         {
             if (UiManager.UiInstance.GetOxygenAmount() > 0)
             {
-                UiManager.UiInstance.SetOxygenAmount(UiManager.UiInstance.GetOxygenAmount() - (GameManager.Instance.GetOxygenTank() * Time.deltaTime * (maxY - playerTransform.position.y)));
+                UiManager.UiInstance.SetOxygenAmount(UiManager.UiInstance.GetOxygenAmount() - (GameManager.Instance.GetOxygenTank() * 0.0001f * Time.deltaTime * (maxY - playerTransform.position.y)));
 
             }
             else

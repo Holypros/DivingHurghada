@@ -85,7 +85,7 @@ public class Market : MonoBehaviour
 
         if (currentSelection.Equals(Items.OxygenUpgrading)) {
             GameManager.Instance.MinusFromSCore(oxygenUpgrade);
-            GameManager.Instance.UpgradeOxygenTank(30);
+            GameManager.Instance.UpgradeOxygenTank(1f);
             UpdateScore();
             oxygenItem.transform.SetParent(itemsYouHave.transform);
             upgradingOxygenBtn.interactable = false;
@@ -117,15 +117,42 @@ public class Market : MonoBehaviour
             skinChangingBtn.interactable = false;
             defaultSkinBtn.interactable = true;
             defaultSkin = false;
-            Debug.Log("not default");
+
+            //male with second skin
+            if (maleCharacter)
+            {
+                GameManager.Instance.SetAvatar(2);
+                Debug.Log("male with second skin");
+            }
+            //female with second skin
+            else
+            {
+                GameManager.Instance.SetAvatar(5);
+                Debug.Log("female with second skin");
+
+            }
 
         }
         else 
         {
+            
             skinChangingBtn.interactable = true;
             defaultSkinBtn.interactable = false;
             defaultSkin = true;
-            Debug.Log("default");
+            //male with default skin
+            if (maleCharacter)
+            {
+                GameManager.Instance.SetAvatar(1);
+                Debug.Log("male with default skin");
+
+            }
+            //female with default skin
+            else
+            {
+                GameManager.Instance.SetAvatar(4);
+                Debug.Log("female with default skin");
+
+            }
 
         }
     }
@@ -137,12 +164,45 @@ public class Market : MonoBehaviour
             femaleCharacterBtn.interactable = false;
             maleCharacterBtn.interactable = true;
             maleCharacter = false;
+
+            //female with default skin
+            if (defaultSkin)
+            {
+                GameManager.Instance.SetAvatar(4);
+                Debug.Log("female with default skin");
+
+            }
+            //female with second skin
+            else
+            {
+                GameManager.Instance.SetAvatar(5);
+                Debug.Log("female with second skin");
+
+            }
+
         }
         else
         {
             femaleCharacterBtn.interactable = true;
             maleCharacterBtn.interactable = false;
             maleCharacter = true;
+            GameManager.Instance.SetAvatar(6);
+
+            //male with default skin
+            if (defaultSkin)
+            {
+                GameManager.Instance.SetAvatar(1);
+                Debug.Log("male with default skin");
+
+            }
+            //male with second skin
+            else
+            {
+                GameManager.Instance.SetAvatar(2);
+                Debug.Log("male with second skin");
+
+            }
+
         }
     }
 }

@@ -5,10 +5,11 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     public static GameManager Instance;
 
-    float oxygenLossRate = 0.0003f;
-     int Score = 0;
+    float oxygenLossRate = 10f;
+    int Score = 0;
     float maxY = 27.2f;
     float minY = -60f;
+    int avatar = 1;
     public float playerLength;
     //[HideInInspector]
     //public int CreatureMovementCounter=0;
@@ -91,6 +92,15 @@ public class GameManager : MonoBehaviour
     public float GetOxygenTank()
     {
         return oxygenLossRate;
+    }
+
+    public void SetAvatar(int a) {
+        avatar = a;
+    }
+
+    public int GetAvatar()
+    {
+        return avatar;
     }
 }
     //public void trans()

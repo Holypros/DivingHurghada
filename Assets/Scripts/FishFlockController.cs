@@ -187,7 +187,7 @@ public class FishFlockController : MonoBehaviour
 
     void Update()
     {
-        if (oldFishesCount != fishesCount)
+        /*if (oldFishesCount != fishesCount)
         {
             if (refreshFishCounter.Ended())
             {
@@ -199,7 +199,7 @@ public class FishFlockController : MonoBehaviour
 
                 refreshFishCounter.Reset();
             }
-        }
+        }*/
 
         UpdateGroupAnchor();
         var time = Time.time;
@@ -287,8 +287,6 @@ public class FishFlockController : MonoBehaviour
 
             fishesData[i] = fish;
         }
-
-        //fishBuffer.SetData(fishesData);
     }
 
     Vector3 GetSeparationVector(Vector3 my_pos, Vector3 target_pos)
