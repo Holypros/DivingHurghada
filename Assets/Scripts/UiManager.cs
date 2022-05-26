@@ -104,18 +104,21 @@ public class UiManager : MonoBehaviour
             GameManager.Instance.AddTOScore(3);
             ButtonIsCliked = true;
             CollectButton.gameObject.SetActive(false);
-            TrashScript.Tinstance.IsTriggerd = false;    
+            TrashScript.Tinstance.IsTriggerd = false;
+           AudioManager.AudioInstance.EffectPlayer();
     }
 
     public void creatureClicked()
     {       
         clicked++;
         Debug.Log(clicked);
+        AudioManager.AudioInstance.EffectPlayer();
     }
 
     public void transitionClicked()
     {
        StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+        AudioManager.AudioInstance.EffectPlayer();
     }
 
 
@@ -136,12 +139,14 @@ public class UiManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         GameIsPaused = true;
+        AudioManager.AudioInstance.EffectPlayer();
     }
 
     public void Pause()
     {
         Time.timeScale = 0f;
         GameIsPaused = true;
+        AudioManager.AudioInstance.EffectPlayer();
 
     }
 
@@ -155,7 +160,8 @@ public class UiManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
-        }       
+        }
+        AudioManager.AudioInstance.EffectPlayer();
     }
 
 
