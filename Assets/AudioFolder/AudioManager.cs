@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class AudioManager : MonoBehaviour
 {
     static public AudioManager AudioInstance;
-    // Start is called before the first frame update
-    [SerializeField] private Slider Musicslider;
-    [SerializeField] private Slider EffectSlider;
     [SerializeField] public AudioSource EffectSource;
     [SerializeField] public AudioSource MusicSource;
-    [SerializeField] public AudioClip Effectsclip;
+    [SerializeField] public AudioSource SwimmingEffect;
+   // Start is called before the first frame update
+
+
+   [SerializeField] public AudioClip Effectsclip;
+    [SerializeField] public AudioClip SwimmimgClip;
 
     private void Awake()
     {
@@ -22,56 +25,46 @@ public class AudioManager : MonoBehaviour
         }
         else if (AudioInstance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(this);
-
+        DontDestroyOnLoad(gameObject);
+        //if (AudioSlider .AudioS.MusicSource.isPlaying)
+        //{
+        //    AudioSlider.AudioS.MusicSource.playOnAwake=false;
+        //}
+       // PlayerPrefs.Save();
     }
 
-    void Start()
-    {
-        MusicSource.volume = 0.5f;
-        MusicSource.volume = PlayerPrefs.GetFloat("Music");
-        EffectSource.volume = PlayerPrefs.GetFloat("Effects");
-        EffectSlider.value = PlayerPrefs.GetFloat("Effects");
-        Musicslider.value = MusicSource.volume;
-
-    }
+    
 
     // Update is called once per frame
 
     public void UpdateMusicSlider()
     {
 
-        MusicSource.volume = Musicslider.value;
-        PlayerPrefs.SetFloat("Music", Musicslider.value);
+       
+        MusicSource.volume = AudioSlider.AudioS.Musicslider.value;
+        AudioSlider.AudioS.Musicslider.value = MusicSource.volume;
+        PlayerPrefs.SetFloat("Music", AudioSlider.AudioS.Musicslider.value);
     }
     public void UpdateEffectSlider()
     {
 
 
-        EffectSource.volume = EffectSlider.value;
-        PlayerPrefs.SetFloat("Effects", EffectSlider.value);
+       EffectSource.volume = AudioSlider.AudioS.EffectSlider.value;
+        AudioSlider.AudioS.EffectSlider.value =EffectSource.volume;
+        PlayerPrefs.SetFloat("Effects", AudioSlider.AudioS.EffectSlider.value);
     }
     public void EffectPlayer()
     {
 
-        EffectSource.PlayOneShot(Effectsclip);
+       EffectSource.PlayOneShot(Effectsclip);
 
-        EffectSource.volume = EffectSlider.value;
-
-
-
+        EffectSource.volume = AudioSlider.myval;
+          
 
     }
-    public void MuteButton()
-    {
-        MusicSource.volume = 0;
-        Musicslider.value = MusicSource.volume;
-        EffectSource.volume = 0;
-        EffectSlider.value = 0;
-
-    }
+    
     //public void test()
     //{
     //    EffectPlayer();

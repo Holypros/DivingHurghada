@@ -49,7 +49,12 @@ public class UiManager : MonoBehaviour
             Destroy(this);
         }
         //DontDestroyOnLoad(this);
+        //PlayerPrefs.Save();
     }
+    //public void StartGame()
+    //{
+    //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    //}
     void Start()
     {
         CollectButton.gameObject.SetActive(false);
