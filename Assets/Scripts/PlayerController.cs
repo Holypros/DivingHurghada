@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] float maxVelocity = 20;
     [SerializeField] float maxY = 7.5f;
+    //Vector3 swimmimgspeed;
+    //Vector3 swimmingchange;
 
     //public Vector3 velocity_reference;
     public float velocity_reference_x;
@@ -22,17 +24,31 @@ public class PlayerController : MonoBehaviour
     private Transform cameraMain;
 
     int y = 0;
-
+    Vector3 pos;
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = transform;
+        pos = new Vector3(2, 2, 2);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         HandlePlayerMovement(y);
+        if (rb.velocity.magnitude >= pos.magnitude)
+        {
+            AudioManager.AudioInstance.SwimmingEffect.volume = 1;
+            if(!AudioManager.AudioInstance.SwimmingEffect.isPlaying)
+            AudioManager.AudioInstance.SwimmingEffect.PlayOneShot(AudioManager.AudioInstance.SwimmimgClip);
+                //OneShot(AudioManager.AudioInstance.SwimmimgClip);
+        }
+        else
+        {
+            if (AudioManager.AudioInstance.SwimmingEffect.isPlaying)
+                AudioManager.AudioInstance.SwimmingEffect.Stop();
+        }
+        Debug.Log(speed);
     }
 
     void HandlePlayerMovement(int y)
@@ -54,7 +70,8 @@ public class PlayerController : MonoBehaviour
         velocityChange.y = Mathf.Clamp(velocityChange.y, -maxVelocity, maxVelocity);
 
         rb.AddForce(velocityChange, ForceMode.VelocityChange);
-
+        //swimmimgspeed = velocity;
+        //swimmingchange = velocityChange;
 
         //velocity_reference = velocityChange;
         velocity_reference_x = rb.velocity.x;
