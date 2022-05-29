@@ -15,7 +15,9 @@ public class Market : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI scoreAmount;
     [SerializeField] TextMeshProUGUI skinCostTxt;
+    [SerializeField] TextMeshProUGUI oxygenCostTxt;
     [SerializeField] TextMeshProUGUI oxygenUpgradeTxt;
+
 
     [SerializeField] Button defaultSkinBtn;
     [SerializeField] Button maleCharacterBtn;
@@ -36,7 +38,7 @@ public class Market : MonoBehaviour
     private void Start()
     {
         skinCostTxt.text = skinCost + " Coin";
-        oxygenUpgradeTxt.text = oxygenUpgrade + " Coin";
+        oxygenCostTxt.text = oxygenUpgrade + " Coin";
 
         defaultSkinBtn.interactable = false;
         maleCharacterBtn.interactable = false;
@@ -86,10 +88,11 @@ public class Market : MonoBehaviour
         if (currentSelection.Equals(Items.OxygenUpgrading)) {
             GameManager.Instance.MinusFromSCore(oxygenUpgrade);
             GameManager.Instance.UpgradeOxygenTank(1f);
+            oxygenUpgradeTxt.enabled = true;
             UpdateScore();
             oxygenItem.transform.SetParent(itemsYouHave.transform);
             upgradingOxygenBtn.interactable = false;
-            oxygenUpgradeTxt.enabled = false;
+            oxygenCostTxt.enabled = false;
         }
 
         else if (currentSelection.Equals(Items.SkinChanging))

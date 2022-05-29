@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3380,7 +3380,8 @@ MonoBehaviour:
   confirmationPanel: {fileID: 1241922996}
   scoreAmount: {fileID: 540389669}
   skinCostTxt: {fileID: 657498954}
-  oxygenUpgradeTxt: {fileID: 1791806823}
+  oxygenCostTxt: {fileID: 1791806823}
+  oxygenUpgradeTxt: {fileID: 1690526747}
   defaultSkinBtn: {fileID: 300337349}
   maleCharacterBtn: {fileID: 1847425572}
   femaleCharacterBtn: {fileID: 9952419}
@@ -7719,7 +7720,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1690526745}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -7732,7 +7733,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Oxygen Tank is
+  m_text: Oxygen Tank is upgraded
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
