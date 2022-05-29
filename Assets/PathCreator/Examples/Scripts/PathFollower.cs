@@ -29,7 +29,7 @@ namespace PathCreation.Examples
             {
                 if (pathCreator != null)
                 {
-                    distanceTravelled += speed * Time.deltaTime*5;
+                    distanceTravelled += speed * Time.deltaTime;
                     transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
                     transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
                 }
