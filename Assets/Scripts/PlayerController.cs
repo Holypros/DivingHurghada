@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float speed = 5;
     [SerializeField] float maxVelocity = 20;
     [SerializeField] float maxY = 7.5f;
+    
     //Vector3 swimmimgspeed;
     //Vector3 swimmingchange;
 
