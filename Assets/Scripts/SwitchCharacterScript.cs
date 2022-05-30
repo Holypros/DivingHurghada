@@ -27,7 +27,6 @@ public class SwitchCharacterScript : MonoBehaviour
 
     private void OnEnable()
     {
-		Debug.Log(GameManager.Instance.GetAvatar());
 		SwitchAvatar(GameManager.Instance.GetAvatar());
     }
     // public method to switch avatars by pressing UI button

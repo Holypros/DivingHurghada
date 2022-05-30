@@ -197,6 +197,15 @@ public class UiManager : MonoBehaviour
     }
 
     public void ShowGameOverText() {
+        Time.timeScale = 0;
+        SetOxygenAmount(1);
         gameOvetTxt.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        Time.timeScale = 1f;
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
+        AudioManager.AudioInstance.EffectPlayer();
     }
 }

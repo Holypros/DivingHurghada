@@ -113,11 +113,7 @@ public class BoidBehaviour : MonoBehaviour
         transform.position = currentPosition + transform.forward * (velocity * Time.deltaTime);
     }
     int count;
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
-
-    }
+   
 
     private void OnCollisionEnter(Collision collision)
     {

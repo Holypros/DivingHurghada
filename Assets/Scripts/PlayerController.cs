@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
             if (AudioManager.AudioInstance.SwimmingEffect.isPlaying)
                 AudioManager.AudioInstance.SwimmingEffect.Stop();
         }
-        Debug.Log(speed);
+       
     }
 
     void HandlePlayerMovement(int y)

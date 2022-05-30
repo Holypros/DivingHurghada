@@ -29,8 +29,7 @@ public class OxygenTank : MonoBehaviour
 
             }
             else
-            {
-                Time.timeScale = 0;
+            {              
                 UiManager.UiInstance.ShowGameOverText();
             }
         }
