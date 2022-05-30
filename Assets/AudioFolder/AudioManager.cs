@@ -54,6 +54,9 @@ public class AudioManager : MonoBehaviour
        EffectSource.volume = AudioSlider.AudioS.EffectSlider.value;
         AudioSlider.AudioS.EffectSlider.value =EffectSource.volume;
         PlayerPrefs.SetFloat("Effects", AudioSlider.AudioS.EffectSlider.value);
+        SwimmingEffect.volume= AudioSlider.AudioS.EffectSlider.value;
+        
+
     }
     public void EffectPlayer()
     {
