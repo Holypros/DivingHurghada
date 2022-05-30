@@ -87,6 +87,7 @@ public class FishFlockController : MonoBehaviour
     int currentFishesCount;
     int oldFishesCount;
 
+    GameObject[] allFishs;
     SimpleCounter refreshFishCounter = new SimpleCounter();
 
     private void Awake()
@@ -140,6 +141,8 @@ public class FishFlockController : MonoBehaviour
 
         currentFishesCount = fishesCount;
         oldFishesCount = currentFishesCount;
+        allFishs = new GameObject[currentFishesCount];
+
     }
 
     void CreateFishData()
@@ -152,7 +155,8 @@ public class FishFlockController : MonoBehaviour
             fishesData[i] = CreateBehaviour();
             fishesData[i].speed_offset = Random.value * 10.0f;
 
-            fishesTransforms[i] = Instantiate(prefab, fishesData[i].position, Quaternion.identity).transform;
+            allFishs[i] = Instantiate(prefab, fishesData[i].position, Quaternion.identity);
+            fishesTransforms[i] = allFishs[i].transform;
         }
 
         if (boxColliders.Length <= 0)
@@ -251,7 +255,17 @@ public class FishFlockController : MonoBehaviour
 
             var nearby_fishes_count = 1;
 
-            var nearbyBoids = Physics.OverlapSphere(current_pos, neighbourDistance, searchLayer);
+            List<GameObject> nearbyBoids = new List<GameObject>(); 
+            //= Physics.OverlapSphere(current_pos, neighbourDistance, searchLayer);
+            
+            for (int j = 0; j < currentFishesCount; j++) {
+                var dis = allFishs[i].transform.position - allFishs[j].transform.position;
+                if (dis.sqrMagnitude < neighbourDistance * neighbourDistance) {
+                    nearbyBoids.Add(allFishs[j]);
+                }
+            }
+            
+
             foreach (var boid in nearbyBoids)
             {
                 if (boid.gameObject == fish_transform.gameObject) continue;
@@ -262,7 +276,7 @@ public class FishFlockController : MonoBehaviour
                 cohesion += t.position;
             }
 
-            nearby_fishes_count = nearbyBoids.Length;
+            nearby_fishes_count = nearbyBoids.Count;
 
             var avg = 1.0f / nearby_fishes_count;
             alignment *= avg;
@@ -413,7 +427,7 @@ public class FishFlockController : MonoBehaviour
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireCube(Application.isPlaying ? groupAnchor : transform.position, volumeSize);
 
-        if (Application.isPlaying)
+        /*if (Application.isPlaying)
         {
             Gizmos.color = Color.green;
             for (int i = 0; i < targetPositions.Length - 1; i++)
@@ -425,6 +439,6 @@ public class FishFlockController : MonoBehaviour
                 if ((i + 1) == targetPositions.Length - 1)
                     Gizmos.DrawWireSphere(targetPositions[i + 1], 1f);
             }
-        }
+        }*/
     }
 }
