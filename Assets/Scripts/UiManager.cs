@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class UiManager : MonoBehaviour
 {
+    
     // Start is called before the first frame update 
     public static UiManager UiInstance;
     public Button CollectButton;
@@ -64,6 +65,7 @@ public class UiManager : MonoBehaviour
         catchButton.gameObject.SetActive(false);
         congrats.gameObject.SetActive(false);
         nextLevel.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -165,6 +167,10 @@ public class UiManager : MonoBehaviour
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {
             StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 3));
         }
         AudioManager.AudioInstance.EffectPlayer();
     }
