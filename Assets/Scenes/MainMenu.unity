@@ -1708,8 +1708,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767436591}
-        m_TargetAssemblyTypeName: Market, Assembly-CSharp
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
         m_MethodName: YesClicked
         m_Mode: 1
         m_Arguments:
@@ -2601,7 +2601,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 100}
+  m_SizeDelta: {x: 500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343240469
 MonoBehaviour:
@@ -3079,7 +3079,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1105798813}
   m_Father: {fileID: 508650606}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3486,7 +3487,6 @@ RectTransform:
   m_Children:
   - {fileID: 1974277924}
   - {fileID: 426827767}
-  - {fileID: 1105798813}
   m_Father: {fileID: 362456100}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4436,6 +4436,7 @@ GameObject:
   - component: {fileID: 608388720}
   - component: {fileID: 608388719}
   - component: {fileID: 608388721}
+  - component: {fileID: 608388722}
   m_Layer: 5
   m_Name: Tank
   m_TagString: Untagged
@@ -4455,14 +4456,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1955746403}
   - {fileID: 689107553}
   m_Father: {fileID: 1111178778}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 710.28314, y: -453.41583}
-  m_SizeDelta: {x: 1420.5663, y: 693.16833}
+  m_AnchoredPosition: {x: 728.91943, y: -450.49506}
+  m_SizeDelta: {x: 1457.8389, y: 699.0099}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608388719
 MonoBehaviour:
@@ -4522,6 +4524,32 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 100
   m_LayoutPriority: 1
+--- !u!114 &608388722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 608388717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 40
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 3
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &608821827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5362,16 +5390,15 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1955746403}
   - {fileID: 807640314}
   - {fileID: 1650363906}
   m_Father: {fileID: 608388718}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 40, y: -574.25745}
+  m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &689107554
 MonoBehaviour:
@@ -5386,7 +5413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 400
+    m_Left: 0
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
@@ -5780,11 +5807,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 689107553}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -550}
+  m_AnchoredPosition: {x: 200, y: -50}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &807640315
@@ -5918,7 +5945,7 @@ RectTransform:
   m_Children:
   - {fileID: 23606724}
   m_Father: {fileID: 2060991309}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7187,7 +7214,6 @@ RectTransform:
   m_Children:
   - {fileID: 1812367592}
   - {fileID: 1838281211}
-  - {fileID: 1738481789}
   m_Father: {fileID: 362456100}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7306,8 +7332,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 767436591}
-        m_TargetAssemblyTypeName: Market, Assembly-CSharp
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
         m_MethodName: CancelClicked
         m_Mode: 1
         m_Arguments:
@@ -7464,12 +7490,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 596974902}
-  m_Father: {fileID: 508650606}
-  m_RootOrder: 2
+  m_Father: {fileID: 426827767}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100.00002, y: -109.99994}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1105798814
@@ -7515,7 +7541,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1105798815}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ExtraMaleSkinClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1105798815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8627,7 +8665,7 @@ RectTransform:
   - {fileID: 142451856}
   - {fileID: 1672084607}
   m_Father: {fileID: 2060991309}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8797,7 +8835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 68bd1915cee9c2341a3c24e23f96bc3c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8858,7 +8896,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1265347233}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeFemaleSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1286605620
 GameObject:
   m_ObjectHideFlags: 0
@@ -9294,7 +9344,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1343876373}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeToFemaleCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1343876373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10169,7 +10231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1493659481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeToMaleCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1493659481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11268,11 +11342,11 @@ RectTransform:
   m_Children:
   - {fileID: 140890813}
   m_Father: {fileID: 689107553}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -610}
+  m_AnchoredPosition: {x: 200, y: -110}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1650363907
@@ -11318,7 +11392,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1650363908}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: UpgradeTankClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1650363908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12098,12 +12184,12 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 102431584}
-  m_Father: {fileID: 1033328188}
-  m_RootOrder: 2
+  m_Father: {fileID: 1838281211}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 100.00002, y: -109.99994}
   m_SizeDelta: {x: 160, y: 60}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1738481790
@@ -12149,7 +12235,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1738481791}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ExtraFemaleSkinClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1738481791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12956,7 +13054,7 @@ GameObject:
   - component: {fileID: 1812367594}
   - component: {fileID: 1812367593}
   m_Layer: 5
-  m_Name: MaleExtra
+  m_Name: FemaleExtra
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13025,7 +13123,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1812367594}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeFemaleSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1812367594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13046,7 +13156,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a57cc4646bf3d3247989dfb9588fc366, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13160,7 +13270,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1738481789}
   m_Father: {fileID: 1033328188}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13651,7 +13762,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 48c0d4d6bebaa934384b07aa1e2f8184, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13712,7 +13823,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1928174258}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeMaleSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1939812933
 GameObject:
   m_ObjectHideFlags: 0
@@ -13878,12 +14001,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 689107553}
+  m_Father: {fileID: 608388718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -250}
+  m_AnchoredPosition: {x: 40, y: -274.75247}
   m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1955746404
@@ -14027,7 +14150,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1a1da36a104725048b8d2388fb8d321d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14088,7 +14211,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1974277925}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2072437736}
+        m_TargetAssemblyTypeName: MarketHandling, Assembly-CSharp
+        m_MethodName: ChangeMaleSkin
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1995096903
 GameObject:
   m_ObjectHideFlags: 0
@@ -14438,9 +14573,9 @@ RectTransform:
   - {fileID: 1473622473}
   - {fileID: 623853919}
   - {fileID: 767436590}
-  - {fileID: 1241922997}
   - {fileID: 850027132}
   - {fileID: 2072437731}
+  - {fileID: 1241922997}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14462,6 +14597,7 @@ GameObject:
   - component: {fileID: 2072437733}
   - component: {fileID: 2072437732}
   - component: {fileID: 2072437735}
+  - component: {fileID: 2072437736}
   m_Layer: 5
   m_Name: Market
   m_TagString: Untagged
@@ -14484,7 +14620,7 @@ RectTransform:
   - {fileID: 1703664856}
   - {fileID: 1111178778}
   m_Father: {fileID: 2060991309}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -14574,6 +14710,29 @@ MonoBehaviour:
   suits: {fileID: 1840491762}
   tank: {fileID: 608388717}
   owned: {fileID: 8208986}
+--- !u!114 &2072437736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2072437730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6741826211d154591352126fceb3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confirmationPanel: {fileID: 1241922996}
+  charImg: {fileID: 236064822}
+  tankBuy: {fileID: 689107552}
+  maleSkinBuy: {fileID: 426827766}
+  femaleSkinBuy: {fileID: 1838281210}
+  maleSkin: {fileID: 1928174260}
+  femaleSkin: {fileID: 1265347235}
+  maleSkinExtra: {fileID: 1974277927}
+  femaleSkinExtra: {fileID: 1812367593}
+  scoreAmount: {fileID: 343240469}
+  scrollRect: {fileID: 1840491766}
 --- !u!1 &2096729123
 GameObject:
   m_ObjectHideFlags: 0

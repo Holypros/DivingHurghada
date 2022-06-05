@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public enum Items { 
+/*public enum Items { 
     SkinChanging, OxygenUpgrading
-}
+}*/
 
 //public enum 
 public class Market : MonoBehaviour
@@ -72,7 +72,7 @@ public class Market : MonoBehaviour
 
     public void ChangeSkinClicked() {
         confirmationPanel.SetActive(true);
-        currentSelection = Items.SkinChanging;
+        //currentSelection = Items.SkinChanging;
     }
 
     private void UpdateScore()
@@ -95,7 +95,7 @@ public class Market : MonoBehaviour
             oxygenCostTxt.enabled = false;
         }
 
-        else if (currentSelection.Equals(Items.SkinChanging))
+        else /*if (currentSelection.Equals(Items.SkinChanging))*/
         {
             GameManager.Instance.MinusFromSCore(skinCost);
             UpdateScore();
