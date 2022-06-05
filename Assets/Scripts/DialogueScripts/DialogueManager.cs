@@ -7,6 +7,7 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] public AudioSource voiceOver;
+    [SerializeField] private GameObject firstPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -14,6 +15,10 @@ public class DialogueManager : MonoBehaviour
     private Queue<AudioClip> audioclips;
 
     public Animator animator;
+
+    private int counter = 0;
+
+    
 
     private void Awake()
     {
@@ -58,6 +63,15 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
         voiceOver.PlayOneShot(clip);
+        counter++;
+        if(counter == 2)
+        {
+            firstPanel.SetActive(true);
+        }
+        else if (counter == 3)
+        {
+            firstPanel.SetActive(false);
+        }
     }
 
     IEnumerator TypeSentence (string sentence)
@@ -75,4 +89,6 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
     }
+
+
 }
