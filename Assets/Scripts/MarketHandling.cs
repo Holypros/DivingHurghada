@@ -175,7 +175,7 @@ public class MarketHandling : MonoBehaviour
         femaleSkinExtra.interactable = false;
 
         maleSkin.interactable = true;
-        if (maleSkinBuy.active == false)
+        if (maleSkinBuy.activeInHierarchy == false)
             maleSkinExtra.interactable = true;
 
         scrollRect.normalizedPosition = new Vector2(0, 0);
@@ -193,7 +193,7 @@ public class MarketHandling : MonoBehaviour
         maleSkinExtra.interactable = false;
 
         femaleSkin.interactable = true;
-        if(femaleSkinBuy.active == false)
+        if(femaleSkinBuy.activeInHierarchy == false)
             femaleSkinExtra.interactable = true;
 
         scrollRect.normalizedPosition = new Vector2(1, 0);
