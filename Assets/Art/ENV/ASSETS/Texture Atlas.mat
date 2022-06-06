@@ -15,7 +15,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -115,6 +115,19 @@ Material:
     - _Speed: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _TessEdgeLength: 16
+    - _TessMax: 25
+    - _TessMaxDisp: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 16
+    - _TransAmbient: 0.1
+    - _TransDirect: 0.9
+    - _TransNormal: 0.5
+    - _TransScattering: 2
+    - _TransShadow: 0.5
+    - _TransStrength: 1
+    - _TransmissionShadow: 0.5
     - _UVSec: 0
     - _WaveHeight: 0.1
     - _WorkflowMode: 1
