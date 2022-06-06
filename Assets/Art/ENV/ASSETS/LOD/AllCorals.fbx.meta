@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 3db173b8dfdb7bc44864eaae58c94466
+guid: 6c724180300af9e4894c62c9ec9dbc47
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Texture Atlas
-    second: {fileID: 2100000, guid: 59d5d412a5633304fbfc0954c4e41a35, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,8 +35,8 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages:
-    - 0.045382626
-    - 0.006862836
+    - 0.25
+    - 0.01
     globalScale: 1
     meshCompression: 0
     addColliders: 0
