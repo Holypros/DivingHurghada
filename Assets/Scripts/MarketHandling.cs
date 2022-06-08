@@ -32,8 +32,14 @@ public class MarketHandling : MonoBehaviour
     Items currentSelection;
     int maleSkinCost = 0, femaleSkinCost = 0, oxygenUpgrade = 0;
 
+    Sprite maleSkinImg, femaleSkinImg, maleExtraSkinImg, femaleExtraSkinImg;
     void Start()
     {
+        maleSkinImg = maleSkin.gameObject.GetComponent<Image>().sprite;
+        femaleSkinImg = femaleSkin.gameObject.GetComponent<Image>().sprite;
+
+        maleExtraSkinImg = maleSkinExtra.gameObject.GetComponent<Image>().sprite;
+        femaleExtraSkinImg = femaleSkinExtra.gameObject.GetComponent<Image>().sprite;
         UpdateScore();
 
         if (PlayerPrefs.GetInt("UpgradeTank") == 1)
@@ -129,14 +135,14 @@ public class MarketHandling : MonoBehaviour
         if (def == 0)
         {
             GameManager.Instance.SetAvatar(1);
-            charImg.sprite = maleSkin.gameObject.GetComponent<Image>().sprite;
+            charImg.sprite = maleSkinImg;
             PlayerPrefs.SetInt("extraSkin", 0);
 
         }
         else
         {
             GameManager.Instance.SetAvatar(2);
-            charImg.sprite = maleSkinExtra.gameObject.GetComponent<Image>().sprite;
+            charImg.sprite = maleExtraSkinImg;
             PlayerPrefs.SetInt("extraSkin", 1);
 
 
@@ -148,14 +154,14 @@ public class MarketHandling : MonoBehaviour
         if (def == 0)
         {
             GameManager.Instance.SetAvatar(4);
-            charImg.sprite = femaleSkin.gameObject.GetComponent<Image>().sprite;
+            charImg.sprite = femaleSkinImg;
             PlayerPrefs.SetInt("extraSkin", 0);
 
         }
         else
         {
             GameManager.Instance.SetAvatar(5);
-            charImg.sprite = femaleSkinExtra.gameObject.GetComponent<Image>().sprite;
+            charImg.sprite = femaleExtraSkinImg;
             PlayerPrefs.SetInt("extraSkin", 1);
 
         }
@@ -167,7 +173,7 @@ public class MarketHandling : MonoBehaviour
 
     public void ChangeToMaleCharacter()
     {
-        charImg.sprite = maleSkin.gameObject.GetComponent<Image>().sprite;
+        charImg.sprite = maleSkinImg;
         //femaleImg.SetActive(false);
         //maleImg.SetActive(true);
 
@@ -185,7 +191,7 @@ public class MarketHandling : MonoBehaviour
 
     public void ChangeToFemaleCharacter()
     {
-        charImg.sprite = femaleSkin.gameObject.GetComponent<Image>().sprite;
+        charImg.sprite = femaleSkinImg;
         //maleImg.SetActive(false);
         //femaleImg.SetActive(true);
 
