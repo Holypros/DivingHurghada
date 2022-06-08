@@ -19,10 +19,21 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _Low_ID_lambert1_BaseColor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _AlphaCutoff: 0.5
+    - _Amp: 100
+    - _Speed: 1
+    - _WaveHeight: 0.01
     - _hightwave: 1
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}

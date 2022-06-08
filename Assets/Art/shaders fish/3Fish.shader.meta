@@ -5,6 +5,7 @@ ShaderImporter:
   defaultTextures:
   - _Low_ID_lambert1_BaseColor: {fileID: 2800000, guid: 23620fa39fa036247ab63b5d782dcb0a,
       type: 3}
+  - _Allfish_normal: {fileID: 2800000, guid: 78549f98b47dd914c938065359efd47a, type: 3}
   nonModifiableTextures: []
   preprocessorOverride: 0
   userData: 
