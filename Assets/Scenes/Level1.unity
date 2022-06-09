@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276841, g: 0.21589246, b: 0.2978262, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2295,7 +2295,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &191606105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4085,7 +4085,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.23785523, y: -0.000000008356422, z: 0.0000000020465354, w: 0.9713006}
+  m_LocalRotation: {x: 0.23785523, y: -0.00000000835621, z: 0.0000000020456639, w: 0.9713006}
   m_LocalPosition: {x: -45.166325, y: 32.34, z: 30.815132}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7234,7 +7234,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1666667, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7250,7 +7250,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544939540}
-  m_LocalRotation: {x: 0.22019526, y: -0.000000018765151, z: 0.000000004235966, w: 0.9754558}
+  m_LocalRotation: {x: 0.22019526, y: 0.000000018765151, z: -0.000000004235966, w: 0.9754558}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8471,7 +8471,7 @@ Transform:
   - {fileID: 1068954857}
   - {fileID: 491125535}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &725694314
 PrefabInstance:
@@ -10464,7 +10464,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1666667, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12228,7 +12228,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1002756316
 PrefabInstance:
@@ -18372,7 +18372,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1666667, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -18991,7 +18991,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1656139513
 PrefabInstance:
@@ -20873,7 +20873,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1892991404
 PrefabInstance:
@@ -21207,7 +21207,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 2.1666667, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -22989,6 +22989,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059106625}
   m_CullTransparentMesh: 1
+--- !u!1 &2076235043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076235045}
+  - component: {fileID: 2076235044}
+  m_Layer: 0
+  m_Name: FishFlock (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2076235044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076235043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd763680537e384397f14d5b166cc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swimmingAreaWidth: 26
+  swimmingAreaHeight: 7
+  swimmingAreaDepth: 10
+  groupAreaWidth: 2
+  groupAreaHeight: 3
+  groupAreaDepth: 10
+  prefab: {fileID: 6685413695871471014, guid: 3f9a62333ed599548a44fe168b6e822c, type: 3}
+  debugDraw: 1
+  fishesCount: 25
+  minSpeed: 2
+  maxSpeed: 4
+  minRotationSpeed: 2
+  maxRotationSpeed: 4
+  neighbourDistance: 2
+  spawnRadius: 1
+  speedVariation: 0.2
+  searchLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  minTargetPoints: 10
+  maxTargetPoints: 20
+  recalculatePoints: 1
+  groupAreaSpeed: 0.8
+  force: 60
+  boxColliders: []
+--- !u!4 &2076235045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076235043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 36.3, y: 19.5, z: 25.39}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2090516376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3123532564625305723, guid: b5011df1e546adf438ecef8d61e6eab7,
@@ -24108,10 +24177,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownFIshWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 3525695704407946160, guid: 5c63e79cea8ef0f4992059d986a9e6e5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4298150642912553226, guid: 5c63e79cea8ef0f4992059d986a9e6e5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 4298150642912553226, guid: 5c63e79cea8ef0f4992059d986a9e6e5,
         type: 3}
@@ -24175,7 +24249,7 @@ PrefabInstance:
     - target: {fileID: 6308572181198739228, guid: 3f9a62333ed599548a44fe168b6e822c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6308572181198739228, guid: 3f9a62333ed599548a44fe168b6e822c,
         type: 3}
@@ -24231,6 +24305,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ClownFIshRed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685413695871471014, guid: 3f9a62333ed599548a44fe168b6e822c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9a62333ed599548a44fe168b6e822c, type: 3}
@@ -24454,7 +24533,7 @@ PrefabInstance:
     - target: {fileID: 2868381867378437589, guid: 106acb32c1e91ac43b11fcd7ea9902dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2868381867378437589, guid: 106acb32c1e91ac43b11fcd7ea9902dc,
         type: 3}
@@ -24511,6 +24590,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButterFlyWhite
       objectReference: {fileID: 0}
+    - target: {fileID: 3208070025692002159, guid: 106acb32c1e91ac43b11fcd7ea9902dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 106acb32c1e91ac43b11fcd7ea9902dc, type: 3}
 --- !u!1001 &2543622143968511590
@@ -24525,10 +24609,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shark
       objectReference: {fileID: 0}
+    - target: {fileID: 1475104839699890093, guid: 164939726e51c064a9af5000740d90e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2248264496490816791, guid: 164939726e51c064a9af5000740d90e2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 2248264496490816791, guid: 164939726e51c064a9af5000740d90e2,
         type: 3}
@@ -24606,10 +24695,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownFIshPanda
       objectReference: {fileID: 0}
+    - target: {fileID: 1466787548799067266, guid: db115b75bf8579c4fae1512cacd40949,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2238503615219252792, guid: db115b75bf8579c4fae1512cacd40949,
         type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2238503615219252792, guid: db115b75bf8579c4fae1512cacd40949,
         type: 3}
@@ -24685,7 +24779,7 @@ PrefabInstance:
     - target: {fileID: 2319894759692094216, guid: 4896435c28d14934a91a6bbff6516fc5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2319894759692094216, guid: 4896435c28d14934a91a6bbff6516fc5,
         type: 3}
@@ -24742,6 +24836,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButterFlyOrange
       objectReference: {fileID: 0}
+    - target: {fileID: 3132881716328042930, guid: 4896435c28d14934a91a6bbff6516fc5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4896435c28d14934a91a6bbff6516fc5, type: 3}
 --- !u!1001 &4593227057360802332
@@ -24756,10 +24855,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownFIshBlack
       objectReference: {fileID: 0}
+    - target: {fileID: 1335417050836022601, guid: 51514150413e174489758028be3e83ee,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1856479306631671795, guid: 51514150413e174489758028be3e83ee,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1856479306631671795, guid: 51514150413e174489758028be3e83ee,
         type: 3}
@@ -25468,7 +25572,7 @@ PrefabInstance:
     - target: {fileID: 8364772620438167428, guid: 2c84590c9804a6348b041644cda17407,
         type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 8364772620438167428, guid: 2c84590c9804a6348b041644cda17407,
         type: 3}
@@ -25525,6 +25629,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownFishOrange
       objectReference: {fileID: 0}
+    - target: {fileID: 9177901517239289150, guid: 2c84590c9804a6348b041644cda17407,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c84590c9804a6348b041644cda17407, type: 3}
 --- !u!1 &6091095687735715010 stripped
@@ -25569,7 +25678,7 @@ PrefabInstance:
     - target: {fileID: 2754178332148432064, guid: 63ad978471a87f947a76e3fb9196a4ec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 27
+      value: 28
       objectReference: {fileID: 0}
     - target: {fileID: 2754178332148432064, guid: 63ad978471a87f947a76e3fb9196a4ec,
         type: 3}
@@ -25626,6 +25735,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: napoleonCyan
       objectReference: {fileID: 0}
+    - target: {fileID: 3274994568444552826, guid: 63ad978471a87f947a76e3fb9196a4ec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63ad978471a87f947a76e3fb9196a4ec, type: 3}
 --- !u!1 &6526855690244330933 stripped
@@ -25660,10 +25774,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ButterFlyYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 4946841236734910733, guid: 47d43c7b33dcb4c42b1ec214469e6c96,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5759370865525849015, guid: 47d43c7b33dcb4c42b1ec214469e6c96,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 5759370865525849015, guid: 47d43c7b33dcb4c42b1ec214469e6c96,
         type: 3}
@@ -25968,10 +26087,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: ClownFIshYellow
       objectReference: {fileID: 0}
+    - target: {fileID: 1382524816748598043, guid: 4ced3343d59bbe94696b314095589b0e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1757642258729273761, guid: 4ced3343d59bbe94696b314095589b0e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 1757642258729273761, guid: 4ced3343d59bbe94696b314095589b0e,
         type: 3}
@@ -26083,7 +26207,7 @@ PrefabInstance:
     - target: {fileID: 4876646214195317258, guid: fcd8d904f04ea1a42b99c46c0ebb5d7d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 4876646214195317258, guid: fcd8d904f04ea1a42b99c46c0ebb5d7d,
         type: 3}
@@ -26139,6 +26263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: napoleonBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 5253030362630443184, guid: fcd8d904f04ea1a42b99c46c0ebb5d7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcd8d904f04ea1a42b99c46c0ebb5d7d, type: 3}
@@ -26221,10 +26350,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: LionFish
       objectReference: {fileID: 0}
+    - target: {fileID: 8417267232388401369, guid: f6f45e67351b8c74abc137e0e897a00d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9195210654036496995, guid: f6f45e67351b8c74abc137e0e897a00d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 9195210654036496995, guid: f6f45e67351b8c74abc137e0e897a00d,
         type: 3}

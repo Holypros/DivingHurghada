@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7107457350906299013}
   - component: {fileID: 3122279833444092014}
   - component: {fileID: 807428812843855481}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButterFlyWhite_LOD01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2868381867378437589}
   - component: {fileID: 7031409523769072292}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButterFlyWhite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3251809513448572774}
   - component: {fileID: 5575738818358187224}
   - component: {fileID: 3873344867863147251}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButterFlyWhite_LOD00
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ GameObject:
   - component: {fileID: 1497379573051049212}
   - component: {fileID: 4907214501552412192}
   - component: {fileID: 6941020002848833718}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ButterFlyWhite_LOD02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
