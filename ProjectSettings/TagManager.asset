@@ -46,3 +46,6 @@ TagManager:
   - name: BackgroundTint
     uniqueID: 3930869295
     locked: 0
+  - name: Foreground
+    uniqueID: 2215338879
+    locked: 0
