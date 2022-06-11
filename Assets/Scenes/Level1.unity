@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.05882353, g: 0.5294118, b: 0.764151, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.5
@@ -3930,7 +3930,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.38268346, y: -0.000000022481316, z: 0.000000009312266, w: 0.92387956}
+  m_LocalRotation: {x: 0.38268346, y: -0.000000022481233, z: 0.000000009312063, w: 0.92387956}
   m_LocalPosition: {x: -45.166325, y: 38.34, z: 28.615131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6446,7 +6446,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5846153, y: 1}
+    m_SensorSize: {x: 1.9844961, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6462,7 +6462,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544939540}
-  m_LocalRotation: {x: 0.34887102, y: 1e-45, z: -0, w: 0.9371708}
+  m_LocalRotation: {x: 0.34887102, y: -3e-45, z: 1e-45, w: 0.9371708}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9953,7 +9953,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5846153, y: 1}
+    m_SensorSize: {x: 1.9844961, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9969,7 +9969,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837117607}
-  m_LocalRotation: {x: 0.36581522, y: 0.000000016013763, z: -0.000000006294357, w: 0.9306875}
+  m_LocalRotation: {x: 0.36581522, y: -0.000000016013763, z: 0.000000006294357, w: 0.9306875}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18791,7 +18791,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5846153, y: 1}
+    m_SensorSize: {x: 1.9844961, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -19473,6 +19473,75 @@ PrefabInstance:
       objectReference: {fileID: 293955057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d2248e40b2ef6347b5a20c2638b4383, type: 3}
+--- !u!1 &1638427582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1638427584}
+  - component: {fileID: 1638427583}
+  m_Layer: 0
+  m_Name: FishFlock (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1638427583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638427582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd763680537e384397f14d5b166cc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swimmingAreaWidth: 14
+  swimmingAreaHeight: 3
+  swimmingAreaDepth: 10
+  groupAreaWidth: 14
+  groupAreaHeight: 3
+  groupAreaDepth: 5
+  prefab: {fileID: 9177901517239289150, guid: 2c84590c9804a6348b041644cda17407, type: 3}
+  debugDraw: 1
+  fishesCount: 20
+  minSpeed: 2
+  maxSpeed: 4
+  minRotationSpeed: 2
+  maxRotationSpeed: 4
+  neighbourDistance: 2
+  spawnRadius: 0
+  speedVariation: 0.2
+  searchLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  minTargetPoints: 10
+  maxTargetPoints: 20
+  recalculatePoints: 1
+  groupAreaSpeed: 0.8
+  force: 60
+  boxColliders: []
+--- !u!4 &1638427584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638427582}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17.45, y: 25.02, z: 27.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 149
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1638863134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19562,6 +19631,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1addaa64e5f061249affdcba2a0932f4, type: 3}
+--- !u!1 &1645222177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1645222179}
+  - component: {fileID: 1645222178}
+  m_Layer: 0
+  m_Name: FishFlock (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1645222178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645222177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd763680537e384397f14d5b166cc0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swimmingAreaWidth: 26
+  swimmingAreaHeight: 7
+  swimmingAreaDepth: 10
+  groupAreaWidth: 2
+  groupAreaHeight: 3
+  groupAreaDepth: 10
+  prefab: {fileID: 6685413695871471014, guid: 3f9a62333ed599548a44fe168b6e822c, type: 3}
+  debugDraw: 1
+  fishesCount: 25
+  minSpeed: 2
+  maxSpeed: 4
+  minRotationSpeed: 2
+  maxRotationSpeed: 4
+  neighbourDistance: 2
+  spawnRadius: 1
+  speedVariation: 0.2
+  searchLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  minTargetPoints: 10
+  maxTargetPoints: 20
+  recalculatePoints: 1
+  groupAreaSpeed: 0.8
+  force: 60
+  boxColliders: []
+--- !u!4 &1645222179
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645222177}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.77, y: 22.11, z: 16.62}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 148
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1647741888
 GameObject:
   m_ObjectHideFlags: 0
@@ -22902,7 +23040,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5846153, y: 1}
+    m_SensorSize: {x: 1.9844961, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -24149,7 +24287,7 @@ MonoBehaviour:
   groupAreaWidth: 2
   groupAreaHeight: 3
   groupAreaDepth: 10
-  prefab: {fileID: 6685413695871471014, guid: 3f9a62333ed599548a44fe168b6e822c, type: 3}
+  prefab: {fileID: 4946841236734910733, guid: 47d43c7b33dcb4c42b1ec214469e6c96, type: 3}
   debugDraw: 1
   fishesCount: 25
   minSpeed: 2
@@ -24176,7 +24314,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076235043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.3, y: 19.5, z: 25.39}
+  m_LocalPosition: {x: 30.31, y: 20.04, z: 34.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
