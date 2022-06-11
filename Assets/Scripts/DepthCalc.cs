@@ -29,6 +29,6 @@ public class DepthCalc : MonoBehaviour
     void Update()
     {
         instanceUI.SetDepthAmount((size - (maxY - playerTransform.position.y)) / size);
-        instanceUI.SetDepthText((int)(maxY - playerTransform.position.y) + " m");
+        instanceUI.SetDepthText((int)(maxY - playerTransform.position.y));
     }
 }

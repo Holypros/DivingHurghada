@@ -85,7 +85,7 @@ public class MarketHandling : MonoBehaviour
         }
 
 
-        if (PlayerPrefs.GetInt("MaleCharacter") == 0)
+        if (PlayerPrefs.GetInt("FemaleCharacter") == 1)
         {
             ChangeToFemaleCharacter();
             ChangeFemaleSkin(PlayerPrefs.GetInt("extraSkin"));
@@ -176,6 +176,8 @@ public class MarketHandling : MonoBehaviour
         charImg.sprite = maleSkinImg;
         //femaleImg.SetActive(false);
         //maleImg.SetActive(true);
+        GameManager.Instance.SetAvatar(1);
+        PlayerPrefs.SetInt("extraSkin", 0);
 
         femaleSkin.interactable = false;
         femaleSkinExtra.interactable = false;
@@ -185,7 +187,7 @@ public class MarketHandling : MonoBehaviour
             maleSkinExtra.interactable = true;
 
         scrollRect.normalizedPosition = new Vector2(0, 0);
-        PlayerPrefs.SetInt("MaleCharacter", 1);
+        PlayerPrefs.SetInt("FemaleCharacter", 0);
 
     }
 
@@ -195,6 +197,9 @@ public class MarketHandling : MonoBehaviour
         //maleImg.SetActive(false);
         //femaleImg.SetActive(true);
 
+        GameManager.Instance.SetAvatar(4);
+        PlayerPrefs.SetInt("extraSkin", 0);
+
         maleSkin.interactable = false;
         maleSkinExtra.interactable = false;
 
@@ -203,7 +208,7 @@ public class MarketHandling : MonoBehaviour
             femaleSkinExtra.interactable = true;
 
         scrollRect.normalizedPosition = new Vector2(1, 0);
-        PlayerPrefs.SetInt("MaleCharacter", 0);
+        PlayerPrefs.SetInt("FemaleCharacter", 1);
 
     }
 

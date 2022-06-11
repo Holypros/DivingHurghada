@@ -185,9 +185,13 @@ public class UiManager : MonoBehaviour
         return DepthBar.fillAmount;
     }
 
-    public void SetDepthText(string txt)
+    public void SetDepthText(int txt)
     {
-        DepthTxt.text = txt;
+        DepthTxt.text = txt + " m";
+
+        /*RectTransform pos = DepthTxt.GetComponent<RectTransform>();
+        pos.anchoredPosition = new Vector2(pos.anchoredPosition.x, txt * -10);*/
+
     }
 
     
