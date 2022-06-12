@@ -24089,20 +24089,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swimmingAreaWidth: 14
-  swimmingAreaHeight: 3
+  swimmingAreaHeight: 2
   swimmingAreaDepth: 10
-  groupAreaWidth: 14
-  groupAreaHeight: 3
-  groupAreaDepth: 5
+  groupAreaWidth: 5
+  groupAreaHeight: 1
+  groupAreaDepth: 3
   prefab: {fileID: 9177901517239289150, guid: 2c84590c9804a6348b041644cda17407, type: 3}
   debugDraw: 1
-  fishesCount: 20
-  minSpeed: 2
-  maxSpeed: 4
+  fishesCount: 14
+  minSpeed: 1
+  maxSpeed: 3
   minRotationSpeed: 2
   maxRotationSpeed: 4
-  neighbourDistance: 2
-  spawnRadius: 0
+  neighbourDistance: 1
+  spawnRadius: 1
   speedVariation: 0.2
   searchLayer:
     serializedVersion: 2
@@ -24265,7 +24265,7 @@ MonoBehaviour:
   maxSpeed: 4
   minRotationSpeed: 2
   maxRotationSpeed: 4
-  neighbourDistance: 2
+  neighbourDistance: 0.5
   spawnRadius: 1
   speedVariation: 0.2
   searchLayer:
@@ -29396,12 +29396,12 @@ MonoBehaviour:
   groupAreaDepth: 10
   prefab: {fileID: 4946841236734910733, guid: 47d43c7b33dcb4c42b1ec214469e6c96, type: 3}
   debugDraw: 1
-  fishesCount: 25
-  minSpeed: 2
+  fishesCount: 40
+  minSpeed: 1
   maxSpeed: 4
-  minRotationSpeed: 2
-  maxRotationSpeed: 4
-  neighbourDistance: 2
+  minRotationSpeed: 1
+  maxRotationSpeed: 3
+  neighbourDistance: 1
   spawnRadius: 1
   speedVariation: 0.2
   searchLayer:
