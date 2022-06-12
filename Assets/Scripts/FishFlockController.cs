@@ -221,7 +221,7 @@ public class FishFlockController : MonoBehaviour
             var current_rot = fish_transform.rotation;
 
             var noise = Mathf.PerlinNoise(time, fish.speed_offset) * 2.0f - 1.0f;
-            var fish_velocity = fish.speed * (1.0f + noise * speedVariation);
+            var fish_velocity = fish.speed * (1.0f + /*noise **/ speedVariation);
 
             var separation = Vector3.zero;
             var alignment = Vector3.zero;
