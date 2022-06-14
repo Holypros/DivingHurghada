@@ -6,6 +6,9 @@ TagManager:
   tags:
   - trash
   - creature
+  - ButterFlyFish
+  - ClownRed
+  - ClownOrange
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,10 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI congrats;
 
     public Button nextLevel;
-
+    public Button TriviaButton;
+    public GameObject Triviapanel;
+    public TextMeshProUGUI TriviaText;
+   
     public Animator transition;
     public float transitionTime = 10.0f;
    
