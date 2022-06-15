@@ -3,11 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] public AudioSource voiceOver;
     [SerializeField] private GameObject firstPanel;
+    [SerializeField] private GameObject secondPanel;
+    [SerializeField] private GameObject thirdPanel;
+    [SerializeField] private GameObject fourthPanel;
+    [SerializeField] private GameObject fifthPanel;
+    [SerializeField] private GameObject sixthPanel;
+    [SerializeField] private GameObject SeventhPanel;
+    [SerializeField] private GameObject EighthPanel;
+
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
@@ -18,7 +27,10 @@ public class DialogueManager : MonoBehaviour
 
     private int counter = 0;
 
-    
+    public Animator transition;
+    public float transitionTime = 10.0f;
+
+    public TextMeshProUGUI continueButton;
 
     private void Awake()
     {
@@ -54,6 +66,7 @@ public class DialogueManager : MonoBehaviour
         voiceOver.Stop();
         if (sentences.Count == 0)
         {
+            EighthPanel.SetActive(false);
             EndDialogue();
             return;
         }
@@ -71,6 +84,42 @@ public class DialogueManager : MonoBehaviour
         else if (counter == 3)
         {
             firstPanel.SetActive(false);
+            secondPanel.SetActive(true);
+        }
+        else if (counter == 4)
+        {
+            secondPanel.SetActive(false);
+            thirdPanel.SetActive(true);
+        }
+        else if (counter == 5)
+        {
+            thirdPanel.SetActive(false);
+            fourthPanel.SetActive(true);
+        }
+        else if(counter == 6)
+        {
+            fourthPanel.SetActive(false);
+            fifthPanel.SetActive(true); 
+        }
+        else if(counter == 7)
+        {
+            fifthPanel.SetActive(false);
+            sixthPanel.SetActive(true);
+        }
+        else if(counter == 8)
+        {
+            sixthPanel.SetActive(false);
+            SeventhPanel.SetActive(true);
+        }
+        else if(counter == 9)
+        {
+            SeventhPanel.SetActive(false);
+            EighthPanel.SetActive(true);
+            
+        }    
+        else if(counter == 10)
+        {
+            continueButton.text = "Start";
         }
     }
 
@@ -86,8 +135,26 @@ public class DialogueManager : MonoBehaviour
 
 
     void EndDialogue()
-    {
+    {       
         animator.SetBool("IsOpen", false);
+        transitionClicked();
+    }
+
+    public void transitionClicked()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex - 2));
+        AudioManager.AudioInstance.EffectPlayer();
+    }
+
+
+
+    IEnumerator LoadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
     }
 
 

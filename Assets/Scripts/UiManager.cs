@@ -127,8 +127,8 @@ public class UiManager : MonoBehaviour
 
     public void transitionClicked()
     {
-       StartCoroutine( LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-        AudioManager.AudioInstance.EffectPlayer();
+       StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+       AudioManager.AudioInstance.EffectPlayer();
     }
 
 
