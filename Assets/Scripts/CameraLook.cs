@@ -43,13 +43,22 @@ public class CameraLook : MonoBehaviour
         
     }
 
-
+    Vector2 oldDelta;
     private void Update()
     {
         Vector2 delta = playerInput.PlayerMain.Look.ReadValue<Vector2>();
-        cinemachine.m_XAxis.Value += delta.x * 125 * lookSpeed * Time.deltaTime;
-        cinemachine.m_YAxis.Value -= delta.y * lookSpeed * Time.deltaTime;
 
+
+        if (oldDelta.x != delta.x)
+        {
+            cinemachine.m_XAxis.Value += delta.x * 125 * lookSpeed * Time.deltaTime;
+        }
+
+        
+        if (oldDelta.y != delta.y)
+        {
+            cinemachine.m_YAxis.Value -= delta.y * lookSpeed * Time.deltaTime;
+        }
 
 
 
@@ -64,7 +73,7 @@ public class CameraLook : MonoBehaviour
 
 
 
-
+        oldDelta = delta;
 
 
         //if (Camera.main.transform.position.y <= maxY)
