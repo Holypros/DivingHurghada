@@ -15,7 +15,9 @@ public class CameraLook : MonoBehaviour
     private CinemachineFreeLook cinemachine;
     private Player playerInput;
 
-    float maxY = 28.15f;
+    public Collider waterCollider;
+
+    float maxY = 28f;
 
 
 
@@ -48,14 +50,31 @@ public class CameraLook : MonoBehaviour
         cinemachine.m_XAxis.Value += delta.x * 125 * lookSpeed * Time.deltaTime;
         cinemachine.m_YAxis.Value -= delta.y * lookSpeed * Time.deltaTime;
 
-        if (Camera.main.transform.position.y <= maxY)
+
+
+
+    if (playerBody.transform.position.y < 26.7f)
         {
-            image.gameObject.SetActive(true);
+            waterCollider.isTrigger = false;
         }
         else
         {
-            image.gameObject.SetActive(false);
+            waterCollider.isTrigger = true;
         }
+
+
+
+
+
+
+        //if (Camera.main.transform.position.y <= maxY)
+        //{
+        //    image.gameObject.SetActive(true);
+        //}
+        //else
+        //{
+        //    image.gameObject.SetActive(false);
+        //}
 
 
 
