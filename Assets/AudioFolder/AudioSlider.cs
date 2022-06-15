@@ -40,6 +40,18 @@ public class AudioSlider : MonoBehaviour
         Musicslider.value = AudioManager.AudioInstance.MusicSource.volume;
 
     }
+
+    private void OnEnable()
+    {
+        AudioManager.AudioInstance.MusicSource.volume = PlayerPrefs.GetFloat("Music");
+
+        AudioManager.AudioInstance.EffectSource.volume = PlayerPrefs.GetFloat("Effects");
+
+        EffectSlider.value = PlayerPrefs.GetFloat("Effects");
+
+        Musicslider.value = AudioManager.AudioInstance.MusicSource.volume;
+    }
+
     public void MuteButton()
     {
 
