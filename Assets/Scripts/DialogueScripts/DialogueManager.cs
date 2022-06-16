@@ -137,7 +137,10 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {       
         animator.SetBool("IsOpen", false);
-        transitionClicked();
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            transitionClicked();
+        }
     }
 
     public void transitionClicked()
