@@ -41,6 +41,7 @@ public class CameraLook : MonoBehaviour
     {
         image.gameObject.SetActive(false);
         
+        
     }
 
     Vector2 oldDelta;
@@ -53,16 +54,16 @@ public class CameraLook : MonoBehaviour
         {
             cinemachine.m_XAxis.Value += delta.x * 125 * lookSpeed * Time.deltaTime;
         }
+        cinemachine.m_YAxis.Value = 0.37f;
 
-        
-        if (oldDelta.y != delta.y)
-        {
-            cinemachine.m_YAxis.Value -= delta.y * lookSpeed * Time.deltaTime;
-        }
+        //if (oldDelta.y != delta.y)
+        //{
+        //    cinemachine.m_YAxis.Value -= delta.y * lookSpeed * Time.deltaTime;
+        //}
 
 
 
-    if (playerBody.transform.position.y < 26.7f)
+        if (playerBody.transform.position.y < 26.7f)
         {
             waterCollider.isTrigger = false;
         }
