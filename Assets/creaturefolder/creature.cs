@@ -40,24 +40,6 @@ public class creature : MonoBehaviour
     void Update()
     {
 
-        //if (Vector3.Distance(player.transform.position, transform.position) < 1)
-        //{  
-            
-
-        //    UiManager.UiInstance.catchButton.gameObject.SetActive(true);
-            //if (UiManager.UiInstance.clicked==1)
-            //{
-            //    //enabledc = true;
-            //    ////  refScript.enabled = true; 
-            //    //if (enabledc == true)
-            //    //{
-            //    //    pathdistance += speedc * Time.deltaTime;
-            //    //    transform.position = Cpath.path.GetDirectionAtDistance(pathdistance);
-            //    //    transform.rotation = Cpath.path.GetRotationAtDistance(pathdistance);
-            //    //}
-            // //   UiManager.UiInstance.catchButton.gameObject.SetActive(false);
-
-            //}
             if (UiManager.UiInstance.clicked ==2)
 
             {

@@ -20,15 +20,34 @@ public class CreatureScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }  
+
 
     private void OnTriggerEnter(Collider other)
-    {
+    { 
         if (other.gameObject.CompareTag("creature"))
         {
-            IsTriggerd = true;
+            //creature = other.gameObject;
+            //if (UiManager.UiInstance.clicked == 0)
+            //{
+            //    IsTriggerd = true;
+
+            //}
+            //if (UiManager.UiInstance.clicked == 1)
+            //{
+            //    if (FIshHome.FishH.IsHome == true)
+            //    {
+            //        IsTriggerd = true;
+
+            //    }
+            //}
             creature = other.gameObject;
+            IsTriggerd = true;
+
         }
+
+       
+
     }
 
     private void OnTriggerExit(Collider other)

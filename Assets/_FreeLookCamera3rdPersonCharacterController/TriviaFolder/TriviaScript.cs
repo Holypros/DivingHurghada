@@ -41,6 +41,27 @@ public class TriviaScript : MonoBehaviour
             UiManager.UiInstance.TriviaButton.gameObject.SetActive(true);
             find = 3;
         }
+        else if (other.gameObject.CompareTag("Napoleonfish1"))
+        {
+
+            UiManager.UiInstance.TriviaButton.gameObject.SetActive(true);
+            find = 4;
+
+        }
+        else if (other.gameObject.CompareTag("Napoleonfish2"))
+        {
+
+            UiManager.UiInstance.TriviaButton.gameObject.SetActive(true);
+            find = 5;
+
+        }
+        else if (other.gameObject.CompareTag("Shark"))
+        {
+
+            UiManager.UiInstance.TriviaButton.gameObject.SetActive(true);
+            find = 6;
+
+        }
         else
         {
             find = 0;
@@ -56,26 +77,50 @@ public class TriviaScript : MonoBehaviour
 
     public void triviabutton()
     {
-        Triviabuttonclicked = true;
+        
         counter++;
         if (counter == 1)
         {
+            Triviabuttonclicked = true;
             UiManager.UiInstance.Triviapanel.gameObject.SetActive(true);
             if (find == 1) {
                 UiManager.UiInstance.TriviaText.text = ("Eclipse or Bennett’s Butterflyfish, This is a peaceful fish that will do well with non - aggressive tankmates, grows to about 6 inches in length 15.24cm.they mainly eat coral polyps.");
-            }
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ButterFlyFish;
+            } 
             else if (find == 2)
             {
                 UiManager.UiInstance.TriviaText.text = ("Maroon clownfish,Lightning maroon.temperament: Aggressive,especially when paired and spawning, Max Size:~6 inches for a large female, about half that for males,In the wild they mainly eat zooplankton.");
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ClownRed;
             } 
             else if (find == 3)
             {
                 UiManager.UiInstance.TriviaText.text = ("Ocellaris clownfisht: PeacefulMax Size: 7.62cm, In the wild they mainly eat zooplankton.");
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ClownOrange;
             }
-           
+            else if (find == 4)
+            {
+                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size: 182.88cm, they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Napoleonfish1;
+            }
+            else if (find == 5)
+            {
+                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size: 182.88cm, they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Napoleonfish2;
+            } 
+            else if (find == 6)
+            {
+                UiManager.UiInstance.TriviaText.text = ("hammerhead shark: Predatory, Size– 5.5 meters - It feeds on bony fish and also the tiger shark which is one of its favorite prey, this shark also eats crustaceans and mollusks.");
+                UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Shark;
+            } 
+            
         }
+        if (counter == 1)
+        {
+            Triviabuttonclicked = false;
+        }
+        
         //UiManager.UiInstance.infoText.gameObject.SetActive(false);
-        if (counter == 2)
+        if ( counter == 2&& Triviabuttonclicked == false)
         {
             UiManager.UiInstance.TriviaButton.gameObject.SetActive(false);
             UiManager.UiInstance.Triviapanel.gameObject.SetActive(false);
