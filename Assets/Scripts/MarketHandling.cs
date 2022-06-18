@@ -168,7 +168,7 @@ public class MarketHandling : MonoBehaviour
     }
     private void UpdateScore()
     {
-        scoreAmount.text = "Your Money : " + GameManager.Instance.GetScore();
+        scoreAmount.text = "" + GameManager.Instance.GetScore();
     }
 
     public void ChangeToMaleCharacter()

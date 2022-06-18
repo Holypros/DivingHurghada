@@ -17,7 +17,7 @@ public class CameraLook : MonoBehaviour
 
     public Collider waterCollider;
 
-    float maxY = 28f;
+
 
 
 
