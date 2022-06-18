@@ -30,7 +30,7 @@ public class MarketHandling : MonoBehaviour
     [SerializeField] ScrollRect scrollRect;
 
     Items currentSelection;
-    int maleSkinCost = 0, femaleSkinCost = 0, oxygenUpgrade = 0;
+    int maleSkinCost = 40, femaleSkinCost = 40, oxygenUpgrade = 100;
 
     Sprite maleSkinImg, femaleSkinImg, maleExtraSkinImg, femaleExtraSkinImg;
     void Start()
@@ -97,7 +97,7 @@ public class MarketHandling : MonoBehaviour
 
         }
     }
-
+    
     private void OnEnable()
     {
         UpdateScore();

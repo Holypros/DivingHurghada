@@ -26,17 +26,19 @@ public class MarketUI : MonoBehaviour
         switch (index)
         {
             case 0:
-                tankBtn.color = Color.white;
-
-                ChangeCurrentSelection(suitsBtn);
+                tankBtn.color = color;
+                suitsBtn.color = Color.white;
+                //ChangeCurrentSelection(suitsBtn);
 
                 suits.SetActive(true);
                 tank.SetActive(false);
 
                 break;
             case 1:
-                suitsBtn.color = Color.white;
-                ChangeCurrentSelection(tankBtn);
+                suitsBtn.color = color;
+                tankBtn.color = Color.white;
+
+                //ChangeCurrentSelection(tankBtn);
                 suits.SetActive(false);
                 tank.SetActive(true);
                 break;
