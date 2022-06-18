@@ -70,7 +70,7 @@ public class UiManager : MonoBehaviour
     {
         CollectButton.gameObject.SetActive(false);
         Text.gameObject.SetActive(false);
-        ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
+        ScoreText.text = ("" + GameManager.Instance.GetScore());
 
         catchButton.gameObject.SetActive(false);
         congrats.gameObject.SetActive(false);
@@ -81,7 +81,7 @@ public class UiManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ScoreText.text = ("Score:" + GameManager.Instance.GetScore());
+        ScoreText.text = ("" + GameManager.Instance.GetScore());
         if (ButtonIsCliked == true)
         {
             Text.gameObject.SetActive(true);
