@@ -9,6 +9,11 @@ TagManager:
   - ButterFlyFish
   - ClownRed
   - ClownOrange
+  - Napoleonfish1
+  - Napoleonfish2
+  - Shark
+  - LionFish
+  - CreatureHome
   layers:
   - Default
   - TransparentFX

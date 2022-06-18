@@ -15,6 +15,13 @@ public class UiManager : MonoBehaviour
     public TextMeshProUGUI ScoreText;
 
     [SerializeField] Image OxygenBar;
+    public Image Fish;
+    public Sprite ButterFlyFish;
+    public Sprite ClownRed;
+    public Sprite ClownOrange;
+    public Sprite Napoleonfish1;
+    public Sprite Napoleonfish2;
+    public Sprite Shark;
     [SerializeField] GameObject gameOvetTxt;
 
     [SerializeField] Image DepthBar;

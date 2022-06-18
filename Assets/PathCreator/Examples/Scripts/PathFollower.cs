@@ -27,6 +27,8 @@ namespace PathCreation.Examples
         {
             if (UiManager.UiInstance.clicked == 1)
             {
+              
+
                 if (pathCreator != null)
                 {
                     distanceTravelled += speed * Time.deltaTime;
