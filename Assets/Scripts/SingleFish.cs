@@ -6,7 +6,7 @@ public class SingleFish : MonoBehaviour
 {
     public Transform[] points;
     int n = 0;
-    float speed = 5f;
+    float speed = 3f;
 
     private void Update()
     {

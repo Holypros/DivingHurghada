@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 8e59018c64182ec43b6cb87ed1eb3089
+guid: e6921dbe89d1dd24fb26ceacf69456f0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
   fontSize: 16
-  forceTextureCase: 3
+  forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - 6809 Chargen
+  - Showcard Gothic
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 3
-  ascentCalculationMode: 0
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 

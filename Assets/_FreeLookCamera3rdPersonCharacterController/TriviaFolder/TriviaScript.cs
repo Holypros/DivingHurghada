@@ -17,13 +17,6 @@ public class TriviaScript : MonoBehaviour
         UiManager.UiInstance.Triviapanel.gameObject.SetActive(false);
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-   
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("ButterFlyFish"))
@@ -62,10 +55,7 @@ public class TriviaScript : MonoBehaviour
             find = 6;
 
         }
-        else
-        {
-            find = 0;
-        }
+        
        
     }
     
@@ -84,30 +74,30 @@ public class TriviaScript : MonoBehaviour
             Triviabuttonclicked = true;
             UiManager.UiInstance.Triviapanel.gameObject.SetActive(true);
             if (find == 1) {
-                UiManager.UiInstance.TriviaText.text = ("Eclipse or Bennett’s Butterflyfish, This is a peaceful fish that will do well with non - aggressive tankmates, grows to about 6 inches in length 15.24cm.they mainly eat coral polyps.");
+                UiManager.UiInstance.TriviaText.text = ("Eclipse or Bennett’s Butterflyfish, This is a peaceful fish that will do well with non - aggressive tankmates, grows to about 6 inches in length 6 inches.they mainly eat coral polyps.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ButterFlyFish;
             } 
-            else if (find == 2)
+          if (find == 2)
             {
-                UiManager.UiInstance.TriviaText.text = ("Maroon clownfish,Lightning maroon.temperament: Aggressive,especially when paired and spawning, Max Size:~6 inches for a large female, about half that for males,In the wild they mainly eat zooplankton.");
+                UiManager.UiInstance.TriviaText.text = ("Maroon clownfish,maroon.temper: Aggressive,especially when paired and spawning, Max Size: 6 inches for a large female, about half that for males,In the wild they mainly eat zooplankton.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ClownRed;
             } 
-            else if (find == 3)
+           if (find == 3)
             {
-                UiManager.UiInstance.TriviaText.text = ("Ocellaris clownfisht: PeacefulMax Size: 7.62cm, In the wild they mainly eat zooplankton.");
+                UiManager.UiInstance.TriviaText.text = ("Ocellaris clownfisht: PeacefulMax Size: 3 inches, In the wild they mainly eat zooplankton.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.ClownOrange;
             }
-            else if (find == 4)
+          if (find == 4)
             {
-                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size: 182.88cm, they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
+                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size:72 inches , they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Napoleonfish1;
             }
-            else if (find == 5)
+             if (find == 5)
             {
-                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size: 182.88cm, they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
+                UiManager.UiInstance.TriviaText.text = ("Napoleon fish: Peaceful but In some areas they are very curious, Size: 72 inches , they roam through coral reefs always in search of prey to eat, and prefer fish with hard shell.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Napoleonfish2;
             } 
-            else if (find == 6)
+             if (find == 6)
             {
                 UiManager.UiInstance.TriviaText.text = ("hammerhead shark: Predatory, Size– 5.5 meters - It feeds on bony fish and also the tiger shark which is one of its favorite prey, this shark also eats crustaceans and mollusks.");
                 UiManager.UiInstance.Fish.sprite = UiManager.UiInstance.Shark;

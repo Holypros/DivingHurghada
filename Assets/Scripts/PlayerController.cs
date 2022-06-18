@@ -39,9 +39,9 @@ public class PlayerController : MonoBehaviour
         HandlePlayerMovement(y);
         if (rb.velocity.magnitude >= pos.magnitude)
         {
-            AudioManager.AudioInstance.SwimmingEffect.volume = 1;
-            if(!AudioManager.AudioInstance.SwimmingEffect.isPlaying)
-            AudioManager.AudioInstance.SwimmingEffect.PlayOneShot(AudioManager.AudioInstance.SwimmimgClip);
+            AudioManager.AudioInstance.SwimmingEffect.volume = 0.5f;
+            //if(!AudioManager.AudioInstance.SwimmingEffect.isPlaying)
+            //AudioManager.AudioInstance.SwimmingEffect.PlayOneShot(AudioManager.AudioInstance.SwimmimgClip);
                 //OneShot(AudioManager.AudioInstance.SwimmimgClip);
         }
         else
@@ -56,7 +56,11 @@ public class PlayerController : MonoBehaviour
     {
         if (y == 1 && playerTransform.position.y >= maxY) {
             y = 0;
+
+
+            
         }
+       
 
         Vector3 targrtVelocity = new Vector3(joystick.Horizontal, y * 0.5f, joystick.Vertical);
 
