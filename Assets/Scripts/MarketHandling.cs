@@ -64,9 +64,9 @@ public class MarketHandling : MonoBehaviour
         }
         else
         {
-            if (maleSkinCost > GameManager.Instance.GetScore())
+            if (femaleSkinCost > GameManager.Instance.GetScore())
             {
-                maleSkinBuy.GetComponentInChildren<Button>().interactable = false;
+                femaleSkinBuy.GetComponentInChildren<Button>().interactable = false;
             }
         }
 
@@ -78,9 +78,9 @@ public class MarketHandling : MonoBehaviour
         }
         else 
         {
-            if (femaleSkinCost > GameManager.Instance.GetScore())
+            if (maleSkinCost > GameManager.Instance.GetScore())
             {
-                femaleSkinBuy.GetComponentInChildren<Button>().interactable = false;
+                maleSkinBuy.GetComponentInChildren<Button>().interactable = false;
             }
         }
 
