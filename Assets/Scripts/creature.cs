@@ -50,7 +50,7 @@ public class creature : MonoBehaviour
                     UiManager.UiInstance.caughtCreature = true;
                     UiManager.UiInstance.catchButton.gameObject.SetActive(false);
                     CreatureScript.Tinstance.IsTriggerd = false;
-                    UiManager.UiInstance.nextLevel.gameObject.SetActive(true);
+                   // UiManager.UiInstance.nextLevel.gameObject.SetActive(true);
                 
             }
 

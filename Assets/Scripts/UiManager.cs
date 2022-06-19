@@ -128,7 +128,6 @@ public class UiManager : MonoBehaviour
     public void creatureClicked()
     {       
         clicked++;
-        Debug.Log(clicked);
         AudioManager.AudioInstance.EffectPlayer();
     }
 
