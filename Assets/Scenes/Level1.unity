@@ -1174,7 +1174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47000003, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.8712683, y: -4}
+  m_AnchoredPosition: {x: 3.8712683, y: -21.7}
   m_SizeDelta: {x: 340.28375, y: 55.9798}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &75337111
@@ -1214,8 +1214,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2215,7 +2215,6 @@ GameObject:
   - component: {fileID: 120000792}
   - component: {fileID: 120000791}
   - component: {fileID: 120000790}
-  - component: {fileID: 120000789}
   m_Layer: 0
   m_Name: Napolepoint9
   m_TagString: Untagged
@@ -2223,19 +2222,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &120000789
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 120000788}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &120000790
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8008,7 +7994,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 6544dd77a37e18043baca844f19489e9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9831,7 +9817,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.10574, y: 1}
+    m_SensorSize: {x: 2.1111112, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12363,7 +12349,6 @@ GameObject:
   - component: {fileID: 671094656}
   - component: {fileID: 671094655}
   - component: {fileID: 671094654}
-  - component: {fileID: 671094653}
   m_Layer: 0
   m_Name: Napolepoint13
   m_TagString: Untagged
@@ -12371,19 +12356,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &671094653
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671094652}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &671094654
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13835,7 +13807,6 @@ GameObject:
   - component: {fileID: 741554137}
   - component: {fileID: 741554136}
   - component: {fileID: 741554135}
-  - component: {fileID: 741554134}
   m_Layer: 0
   m_Name: Napolepoint11
   m_TagString: Untagged
@@ -13843,19 +13814,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &741554134
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 741554133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &741554135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15529,7 +15487,6 @@ GameObject:
   - component: {fileID: 830030920}
   - component: {fileID: 830030919}
   - component: {fileID: 830030918}
-  - component: {fileID: 830030917}
   m_Layer: 0
   m_Name: Napolepoint7
   m_TagString: Untagged
@@ -15537,19 +15494,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &830030917
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830030916}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &830030918
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15668,7 +15612,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.10574, y: 1}
+    m_SensorSize: {x: 2.1111112, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -23386,7 +23330,6 @@ GameObject:
   - component: {fileID: 1205765566}
   - component: {fileID: 1205765565}
   - component: {fileID: 1205765564}
-  - component: {fileID: 1205765563}
   m_Layer: 0
   m_Name: Napolepoint15
   m_TagString: Untagged
@@ -23394,19 +23337,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1205765563
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1205765562}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1205765564
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23912,7 +23842,6 @@ GameObject:
   - component: {fileID: 1236167953}
   - component: {fileID: 1236167952}
   - component: {fileID: 1236167951}
-  - component: {fileID: 1236167950}
   m_Layer: 0
   m_Name: Napolepoint1
   m_TagString: Untagged
@@ -23920,19 +23849,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1236167950
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1236167949}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1236167951
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24713,7 +24629,6 @@ GameObject:
   - component: {fileID: 1272206164}
   - component: {fileID: 1272206163}
   - component: {fileID: 1272206162}
-  - component: {fileID: 1272206161}
   m_Layer: 0
   m_Name: Napolepoint1 (1)
   m_TagString: Untagged
@@ -24721,19 +24636,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1272206161
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1272206160}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1272206162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25018,7 +24920,6 @@ GameObject:
   - component: {fileID: 1278429504}
   - component: {fileID: 1278429503}
   - component: {fileID: 1278429502}
-  - component: {fileID: 1278429501}
   m_Layer: 0
   m_Name: Napolepoint18
   m_TagString: Untagged
@@ -25026,19 +24927,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1278429501
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278429500}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1278429502
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -29477,7 +29365,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -29582,8 +29470,8 @@ Transform:
   - {fileID: 1676628891}
   - {fileID: 2097854334}
   - {fileID: 1883996967}
-  - {fileID: 273308457}
   - {fileID: 1716143663}
+  - {fileID: 273308457}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29735,7 +29623,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.10574, y: 1}
+    m_SensorSize: {x: 2.1111112, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -29751,7 +29639,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1530858471}
-  m_LocalRotation: {x: 0.03751884, y: 0.9615462, z: -0.21277995, w: 0.16954648}
+  m_LocalRotation: {x: 0.037518837, y: 0.9615462, z: -0.21277997, w: 0.16954646}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -37178,7 +37066,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.7, y: -52.21405}
+  m_AnchoredPosition: {x: 31, y: -50.6}
   m_SizeDelta: {x: 107.319, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1926066152
@@ -37324,7 +37212,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.10574, y: 1}
+    m_SensorSize: {x: 2.1111112, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -38183,7 +38071,6 @@ GameObject:
   - component: {fileID: 1992851900}
   - component: {fileID: 1992851899}
   - component: {fileID: 1992851898}
-  - component: {fileID: 1992851897}
   m_Layer: 0
   m_Name: Napolepoint3
   m_TagString: Untagged
@@ -38191,19 +38078,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!135 &1992851897
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1992851896}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1992851898
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -38514,7 +38388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -22.1, y: 42.7234}
+  m_AnchoredPosition: {x: -16.5, y: 26.1}
   m_SizeDelta: {x: 200, y: 34.4854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2003819240
@@ -38555,8 +38429,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
