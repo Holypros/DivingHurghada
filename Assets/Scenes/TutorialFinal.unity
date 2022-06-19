@@ -34945,16 +34945,16 @@ MonoBehaviour:
       at the shop!
     - Enjoy your adventure across the Red Sea!
     audioclips:
-    - {fileID: 8300000, guid: 7f21231011e011f42a3b46f0eba4ff21, type: 3}
-    - {fileID: 8300000, guid: 435649413c92d3549b9b331dd0602067, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
-    - {fileID: 8300000, guid: 2692aab541807e74185760680b714cd5, type: 3}
+    - {fileID: 8300000, guid: acef49880cb27de419f59817e4b0986a, type: 3}
+    - {fileID: 8300000, guid: 0390000976cf061479750390b9ab3e44, type: 3}
+    - {fileID: 8300000, guid: 67bbc569379381548a508db2a2ef1079, type: 3}
+    - {fileID: 8300000, guid: 2cf86aacfb700a049bf66ff34774527d, type: 3}
+    - {fileID: 8300000, guid: 6a4bda574fe9ee143a09597011d76861, type: 3}
+    - {fileID: 8300000, guid: 63431d2bd3b60864491ffb9c74be61e5, type: 3}
+    - {fileID: 8300000, guid: cad85a25f46d9c742aa553674a35be53, type: 3}
+    - {fileID: 8300000, guid: ea597babd32439c41ae6e65d39c1c497, type: 3}
+    - {fileID: 8300000, guid: 55f9acf48dd176e4a9bf6fe8efe1ccf1, type: 3}
+    - {fileID: 8300000, guid: c343a3c11fb2fb04a9abd5de59316f3a, type: 3}
 --- !u!4 &2059121316
 Transform:
   m_ObjectHideFlags: 0
