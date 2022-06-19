@@ -43,11 +43,11 @@ public class AudioSlider : MonoBehaviour
 
     private void OnEnable()
     {
-        AudioManager.AudioInstance.MusicSource.volume = PlayerPrefs.GetFloat("Music");
+        //AudioManager.AudioInstance.MusicSource.volume = PlayerPrefs.GetFloat("Music");
 
-        AudioManager.AudioInstance.EffectSource.volume = PlayerPrefs.GetFloat("Effects");
+        //AudioManager.AudioInstance.EffectSource.volume = PlayerPrefs.GetFloat("Effects");
 
-        EffectSlider.value = PlayerPrefs.GetFloat("Effects");
+        EffectSlider.value = AudioManager.AudioInstance.EffectSource.volume;
 
         Musicslider.value = AudioManager.AudioInstance.MusicSource.volume;
     }
