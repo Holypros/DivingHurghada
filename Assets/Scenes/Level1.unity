@@ -6455,7 +6455,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
-  m_LocalRotation: {x: 0.019462526, y: 0.9786027, z: -0.11037764, w: 0.17255381}
+  m_LocalRotation: {x: 0.019462522, y: 0.9786027, z: -0.11037764, w: 0.17255381}
   m_LocalPosition: {x: -34.756447, y: 28.1, z: 53.17771}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8713,6 +8713,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460799043}
   m_CullTransparentMesh: 1
+--- !u!4 &474434420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+    type: 3}
+  m_PrefabInstance: {fileID: 1147866349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &476517933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9848,7 +9854,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1579943, y: 1}
+    m_SensorSize: {x: 2.2360191, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9864,7 +9870,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544939540}
-  m_LocalRotation: {x: 0.017144231, y: 0.9799963, z: -0.09722992, w: 0.17279951}
+  m_LocalRotation: {x: 0.017144224, y: 0.9799963, z: -0.09722992, w: 0.17279948}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15152,7 +15158,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1579943, y: 1}
+    m_SensorSize: {x: 2.2360191, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -21817,6 +21823,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144704800}
   m_CullTransparentMesh: 1
+--- !u!1001 &1147866349
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1523405375}
+    m_Modifications:
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.163
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.159
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.463
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000000018626449
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 15.043
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -4.235
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116788710314489555, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 11.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 3153778377633627224, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 503514c2089c84744a00a7c980ab59b2, type: 2}
+    - target: {fileID: 3778902861827777107, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8527741576684040612, guid: 7514b872fc6ff2443acb07e73e544ecc,
+        type: 3}
+      propertyPath: m_Name
+      value: soda can red (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7514b872fc6ff2443acb07e73e544ecc, type: 3}
 --- !u!4 &1166294100 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: b9037713bd8bb8347ae0a9ee0be244ed,
@@ -28301,6 +28401,7 @@ Transform:
   - {fileID: 2097854334}
   - {fileID: 1883996967}
   - {fileID: 496077412}
+  - {fileID: 474434420}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28452,7 +28553,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1579943, y: 1}
+    m_SensorSize: {x: 2.2360191, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -35844,7 +35945,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.1579943, y: 1}
+    m_SensorSize: {x: 2.2360191, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
