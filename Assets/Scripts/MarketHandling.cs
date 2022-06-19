@@ -105,8 +105,11 @@ public class MarketHandling : MonoBehaviour
 
     public void UpgradeTankClicked()
     {
-        confirmationPanel.SetActive(true);
-        currentSelection = Items.OxygenUpgrading;
+        if (oxygenUpgrade <= GameManager.Instance.GetScore())
+        {
+            confirmationPanel.SetActive(true);
+            currentSelection = Items.OxygenUpgrading;
+        }
     }
 
     public void UpgradeTank()
@@ -120,14 +123,20 @@ public class MarketHandling : MonoBehaviour
 
     public void ExtraMaleSkinClicked()
     {
-        confirmationPanel.SetActive(true);
-        currentSelection = Items.MaleSkinChanging;
+        if (maleSkinCost <= GameManager.Instance.GetScore())
+        {
+            confirmationPanel.SetActive(true);
+            currentSelection = Items.MaleSkinChanging;
+        }
     }
 
     public void ExtraFemaleSkinClicked()
     {
-        confirmationPanel.SetActive(true);
-        currentSelection = Items.FemaleSkinChanging;
+        if (femaleSkinCost <= GameManager.Instance.GetScore())
+        {
+            confirmationPanel.SetActive(true);
+            currentSelection = Items.FemaleSkinChanging;
+        }
     }
 
     public void ChangeMaleSkin(int def)
@@ -226,7 +235,8 @@ public class MarketHandling : MonoBehaviour
             GameManager.Instance.MinusFromSCore(maleSkinCost);
             UpdateScore();
             maleSkinBuy.SetActive(false);
-            maleSkinExtra.interactable = true;
+            if(PlayerPrefs.GetInt("FemaleCharacter") == 0)
+                maleSkinExtra.interactable = true;
             PlayerPrefs.SetInt("BuyMaleSkin", 1);
 
         }
@@ -235,7 +245,8 @@ public class MarketHandling : MonoBehaviour
             GameManager.Instance.MinusFromSCore(femaleSkinCost);
             UpdateScore();
             femaleSkinBuy.SetActive(false);
-            femaleSkinExtra.interactable = true;
+            if(PlayerPrefs.GetInt("FemaleCharacter") == 1)
+                femaleSkinExtra.interactable = true;
             PlayerPrefs.SetInt("BuyFemaleSkin", 1);
 
         }
