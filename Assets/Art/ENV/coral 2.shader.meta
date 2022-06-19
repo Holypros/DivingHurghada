@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 76195053da977b04d98677c9a2a00dbc
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _Low_ID_lambert1_BaseColor1: {fileID: 2800000, guid: a3595803685fb3044b430250542d6caf,
+      type: 3}
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
