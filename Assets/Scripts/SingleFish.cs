@@ -31,7 +31,7 @@ public class SingleFish : MonoBehaviour
 
             if ( n <= points.Length)
             {
-               lerp = Vector3.Lerp(points[n].position, points[n+1].position, b);
+               lerp = Vector3.Lerp(points[n].position, points[n].position, b);
                
             }
 
