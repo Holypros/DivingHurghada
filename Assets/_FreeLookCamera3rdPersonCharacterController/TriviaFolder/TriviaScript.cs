@@ -59,11 +59,11 @@ public class TriviaScript : MonoBehaviour
        
     }
     
-    private void OnTriggerExit(Collider other)
-    {
-        UiManager.UiInstance.TriviaButton.gameObject.SetActive(false);
-        UiManager.UiInstance.Triviapanel.gameObject.SetActive(false);
-    }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    UiManager.UiInstance.TriviaButton.gameObject.SetActive(false);
+    //    UiManager.UiInstance.Triviapanel.gameObject.SetActive(false);
+    //}
 
     public void triviabutton()
     {

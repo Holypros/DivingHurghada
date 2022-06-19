@@ -8,14 +8,16 @@ public class SingleFish : MonoBehaviour
     int n = 0;
     float speed = 3f;
     float b;
+    Vector3 lerp;
     private void Update()
     {
         Transform p = points[n];
 
         if (Vector3.Distance(transform.position, p.position) < 0.01f)
         {
-            b = 0;
             n = (n + 1) % points.Length;
+
+            b = 0;
         }
         else 
         {
@@ -26,9 +28,14 @@ public class SingleFish : MonoBehaviour
             {
                 b += 0.01f;
             }
-            Vector3 lerp = Vector3.Lerp(points[n].position, points[n + 1].position, b);
-            transform.LookAt(lerp);
 
+            if ( n <= points.Length)
+            {
+               lerp = Vector3.Lerp(points[n].position, points[n+1].position, b);
+               
+            }
+
+            transform.LookAt(lerp);
 
         }
     }
