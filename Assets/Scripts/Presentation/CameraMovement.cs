@@ -16,11 +16,13 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] Transform[] waypoints;
     [SerializeField] Slide[] slide;
 
-    int index = 0, counter = 0;
+    int index = 0;
     int speed = 10;
+    int[] counterSlides;
     // Start is called before the first frame update
     void Start()
     {
+        counterSlides = new int[planes.Length];
 
     }
 
@@ -30,18 +32,12 @@ public class CameraMovement : MonoBehaviour
         //if (Vector3.Distance(transform.position, waypoints[index % waypoints.Length].position) < 0.1) {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            planes[index].material.mainTexture = slide[index].Img[0];
             index++;
-            counter = 0;
-
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && index != 0)
         {
-            planes[index].material.mainTexture = slide[index].Img[0];
-
             index--;
-            counter = 0;
 
         }
 
@@ -52,19 +48,19 @@ public class CameraMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            if (slide[index].Img.Length != 0 && counter < slide[index].Img.Length-1)
+            if (slide[index].Img.Length != 0 && counterSlides[index] < slide[index].Img.Length-1)
             {
-                counter++;
-                planes[index].material.mainTexture = slide[index].Img[counter];
+                counterSlides[index]++;
+                planes[index].material.mainTexture = slide[index].Img[counterSlides[index]];
                 
             }
         }
         if (Input.GetKeyDown(KeyCode.A))
         {
-            if (slide[index].Img.Length != 0 && counter > 0)
+            if (slide[index].Img.Length != 0 && counterSlides[index] > 0)
             {
-                counter--;
-                planes[index].material.mainTexture = slide[index].Img[counter];
+                counterSlides[index]--;
+                planes[index].material.mainTexture = slide[index].Img[counterSlides[index]];
                 
             }
         }
