@@ -98,6 +98,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: eb783845c13225a4089878154443cc62, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _TextureSample13:
+        m_Texture: {fileID: 2800000, guid: 0785344e9f5f930439a8a29d9c8ef895, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -130,6 +134,7 @@ Material:
     - _EnvironmentReflections: 1
     - _Float0: 0.0011764705
     - _Float1: 0.0011764705
+    - _Float3: 3
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossinessSource: 0
