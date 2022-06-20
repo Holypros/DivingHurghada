@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 public struct Slide
@@ -28,12 +30,16 @@ public class CameraMovement : MonoBehaviour
         //if (Vector3.Distance(transform.position, waypoints[index % waypoints.Length].position) < 0.1) {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            planes[index].material.mainTexture = slide[index].Img[0];
             index++;
             counter = 0;
+
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && index != 0)
         {
+            planes[index].material.mainTexture = slide[index].Img[0];
+
             index--;
             counter = 0;
 
@@ -61,6 +67,17 @@ public class CameraMovement : MonoBehaviour
                 planes[index].material.mainTexture = slide[index].Img[counter];
                 
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
         }
     }
 }
