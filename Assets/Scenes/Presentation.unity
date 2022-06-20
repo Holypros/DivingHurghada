@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 43165090}
   - component: {fileID: 43165089}
   m_Layer: 0
-  m_Name: Plane (4)
+  m_Name: Plane 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -994,14 +994,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43165087}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: -34.5, y: 27, z: 40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 428798266}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!64 &43165089
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1036,7 +1036,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 39ac93b250f65eb4bbd392f4cc719302, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3533,7 +3533,7 @@ GameObject:
   - component: {fileID: 174605812}
   - component: {fileID: 174605811}
   m_Layer: 0
-  m_Name: Plane (2)
+  m_Name: Plane 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3588,7 +3588,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 5afded951cf032749952fe85eedee5df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3824,7 +3824,7 @@ GameObject:
   - component: {fileID: 185207226}
   - component: {fileID: 185207225}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Plane 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3838,7 +3838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185207223}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 28, y: 20, z: 14}
+  m_LocalPosition: {x: 28, y: 21, z: 14.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3879,7 +3879,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 447626c071c510845b1eea094571c039, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10298,7 +10298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 572073721}
   m_Layer: 0
-  m_Name: Waypoint 4
+  m_Name: Waypoint 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10312,7 +10312,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572073720}
   m_LocalRotation: {x: 0, y: 0.7245751, z: -0, w: -0.68919593}
-  m_LocalPosition: {x: -15.4, y: 27.1, z: 46.5}
+  m_LocalPosition: {x: -22.49, y: 27.1, z: 47.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12912,7 +12912,7 @@ GameObject:
   - component: {fileID: 675480904}
   - component: {fileID: 675480908}
   m_Layer: 0
-  m_Name: Main Camera (1)
+  m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13029,12 +13029,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1615f62dcf72464288bdf294f002bf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planes:
+  - {fileID: 185207226}
+  - {fileID: 174605812}
+  - {fileID: 1140676767}
+  - {fileID: 43165090}
+  - {fileID: 1053205832}
   waypoints:
   - {fileID: 1190465924}
   - {fileID: 754371296}
   - {fileID: 1386450318}
   - {fileID: 572073721}
   - {fileID: 1519783910}
+  slide:
+  - Img:
+    - {fileID: 2800000, guid: 825875df07c4fb14e9c55e3786d9a529, type: 3}
+    - {fileID: 2800000, guid: bd5f5237a222727408cc90e723294a18, type: 3}
+    - {fileID: 2800000, guid: 1696ac202be7da649b4c6c260b19a439, type: 3}
+  - Img:
+    - {fileID: 2800000, guid: 6c72d5b9cec871d42a0f523d279827be, type: 3}
+    - {fileID: 2800000, guid: 678e35be54952bb4f99c168bd392f635, type: 3}
+  - Img:
+    - {fileID: 2800000, guid: 77a1d188f78f0a747ac8efb53dbbedbc, type: 3}
+    - {fileID: 2800000, guid: ba262bd89e306014baab4b43ab35075f, type: 3}
+  - Img:
+    - {fileID: 2800000, guid: 6744cae285e6bfe47a192afee41f9cc7, type: 3}
+    - {fileID: 2800000, guid: 48a10f5e1e2a8694ab5a97c3a6952d15, type: 3}
+  - Img:
+    - {fileID: 2800000, guid: 79fc91feca6813e49a8fd383e58fdceb, type: 3}
+    - {fileID: 2800000, guid: 915a3135b53a6224eac61000a3053413, type: 3}
+    - {fileID: 2800000, guid: 42c1395b8a7fd344f93c1d7fdffcda25, type: 3}
+    - {fileID: 2800000, guid: 55f545137a921d54c9d5ba3f9eb18149, type: 3}
 --- !u!1001 &679331713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14483,7 +14508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 754371296}
   m_Layer: 0
-  m_Name: Waypoint 2
+  m_Name: Waypoint 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21338,7 +21363,7 @@ GameObject:
   - component: {fileID: 1053205832}
   - component: {fileID: 1053205831}
   m_Layer: 0
-  m_Name: Plane (5)
+  m_Name: Plane 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21351,14 +21376,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053205829}
-  m_LocalRotation: {x: 0.70710677, y: 0, z: 0, w: 0.70710677}
-  m_LocalPosition: {x: -14, y: 26, z: 36}
+  m_LocalRotation: {x: 0, y: 0.70710677, z: -0.70710677, w: 0}
+  m_LocalPosition: {x: -19, y: 26, z: 53.33}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 428798266}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 90, y: 90, z: -90}
 --- !u!64 &1053205831
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -21393,7 +21418,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b814a975ec6d84d4db05b73cab7abaa8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22922,7 +22947,7 @@ GameObject:
   - component: {fileID: 1140676767}
   - component: {fileID: 1140676766}
   m_Layer: 0
-  m_Name: Plane (3)
+  m_Name: Plane 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22977,7 +23002,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 2b12a0efa680adc479a659cab4071dcc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -23618,7 +23643,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1190465924}
   m_Layer: 0
-  m_Name: Waypoint 1
+  m_Name: Waypoint 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28299,7 +28324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386450318}
   m_Layer: 0
-  m_Name: Waypoint 3
+  m_Name: Waypoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28313,7 +28338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386450317}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -10.5, y: 26.5, z: 39.3}
+  m_LocalPosition: {x: -16.24, y: 26.5, z: 39.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30126,7 +30151,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1519783910}
   m_Layer: 0
-  m_Name: Waypoint 5
+  m_Name: Waypoint 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30140,7 +30165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1519783909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.9, y: 26, z: 24.8}
+  m_LocalPosition: {x: -17.5, y: 26, z: 42.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
