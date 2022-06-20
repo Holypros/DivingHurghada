@@ -19,17 +19,15 @@ public class CameraMovement : MonoBehaviour
     int index = 0;
     int speed = 10;
     int[] counterSlides;
-    // Start is called before the first frame update
+
     void Start()
     {
         counterSlides = new int[planes.Length];
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //if (Vector3.Distance(transform.position, waypoints[index % waypoints.Length].position) < 0.1) {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             index++;
