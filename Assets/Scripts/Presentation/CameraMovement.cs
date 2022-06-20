@@ -31,18 +31,19 @@ public class CameraMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             index++;
+            index %= waypoints.Length;
         }
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && index != 0)
         {
             index--;
-
+            index %= waypoints.Length;
         }
 
         var step = speed * Time.deltaTime;
 
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index % waypoints.Length].rotation, step * 3);
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[index % waypoints.Length].position, step);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, step * 3);
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, step);
 
         if (Input.GetKeyDown(KeyCode.D))
         {
