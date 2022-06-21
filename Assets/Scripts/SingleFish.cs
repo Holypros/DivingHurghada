@@ -24,18 +24,11 @@ public class SingleFish : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, p.position, speed * Time.deltaTime);
 
-            if (b <= 1)
-            {
-                b += 0.01f;
-            }
+            var targetRotation = Quaternion.LookRotation(points[n].transform.position - transform.position);
 
-            if ( n <= points.Length)
-            {
-               lerp = Vector3.Lerp(points[n].position, points[n].position, b);
-               
-            }
-
-            transform.LookAt(lerp);
+            // Smoothly rotate towards the target point.
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speed * Time.deltaTime);
+           
 
         }
     }
