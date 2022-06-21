@@ -34102,16 +34102,16 @@ MonoBehaviour:
   swimmingAreaDepth: 10
   groupAreaWidth: 2
   groupAreaHeight: 2
-  groupAreaDepth: 10
+  groupAreaDepth: 3
   prefab: {fileID: 6685413695871471014, guid: 3f9a62333ed599548a44fe168b6e822c, type: 3}
   debugDraw: 1
-  fishesCount: 25
+  fishesCount: 30
   minSpeed: 2
   maxSpeed: 4
   minRotationSpeed: 2
   maxRotationSpeed: 4
-  neighbourDistance: 0.5
-  spawnRadius: 1
+  neighbourDistance: 2
+  spawnRadius: 4
   speedVariation: 0.2
   searchLayer:
     serializedVersion: 2
