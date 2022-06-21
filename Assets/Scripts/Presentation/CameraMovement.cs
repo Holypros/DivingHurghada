@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public struct Slide
 {
-    [SerializeField] public Texture[] Img;
+    [SerializeField] public Material[] Img;
 }
 
 public class CameraMovement : MonoBehaviour
@@ -50,7 +50,7 @@ public class CameraMovement : MonoBehaviour
             if (slide[index].Img.Length != 0 && counterSlides[index] < slide[index].Img.Length-1)
             {
                 counterSlides[index]++;
-                planes[index].material.mainTexture = slide[index].Img[counterSlides[index]];
+                planes[index].material = slide[index].Img[counterSlides[index]];
                 
             }
         }
@@ -59,7 +59,7 @@ public class CameraMovement : MonoBehaviour
             if (slide[index].Img.Length != 0 && counterSlides[index] > 0)
             {
                 counterSlides[index]--;
-                planes[index].material.mainTexture = slide[index].Img[counterSlides[index]];
+                planes[index].material = slide[index].Img[counterSlides[index]];
                 
             }
         }
