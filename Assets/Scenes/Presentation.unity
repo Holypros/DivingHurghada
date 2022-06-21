@@ -13207,6 +13207,7 @@ MonoBehaviour:
   - {fileID: 881495030}
   - {fileID: 2025075745}
   - {fileID: 1887565943}
+  - {fileID: 1661964896}
   slide:
   - Img:
     - {fileID: 2800000, guid: 825875df07c4fb14e9c55e3786d9a529, type: 3}
@@ -13485,6 +13486,7 @@ Transform:
   - {fileID: 881495030}
   - {fileID: 2025075745}
   - {fileID: 1887565943}
+  - {fileID: 1661964896}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34359,6 +34361,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659131746}
   m_CullTransparentMesh: 1
+--- !u!1 &1661964895
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661964896}
+  m_Layer: 0
+  m_Name: 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661964896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661964895}
+  m_LocalRotation: {x: -0.02426324, y: 0.96649563, z: -0.049711168, w: 0.2506517}
+  m_LocalPosition: {x: -12.404, y: 25.351, z: 25.691}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689516851}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 4.814, y: 150.748, z: -4.133}
 --- !u!1 &1668210818
 GameObject:
   m_ObjectHideFlags: 0
@@ -38932,14 +38965,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1887565942}
-  m_LocalRotation: {x: -0.085381374, y: 0.25674453, z: -0.06128064, w: -0.96074814}
+  m_LocalRotation: {x: 0.049402263, y: 0.26278082, z: -0.024886195, w: -0.96326864}
   m_LocalPosition: {x: -12.404, y: 25.351, z: 25.691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 689516851}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 11.276, y: 330.503, z: 4.322}
+  m_LocalEulerAnglesHint: {x: -4.709, y: 329.307, z: 4.253}
 --- !u!1 &1888742412
 GameObject:
   m_ObjectHideFlags: 0
