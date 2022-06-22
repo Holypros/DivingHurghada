@@ -14740,8 +14740,28 @@ MonoBehaviour:
     - {fileID: 2800000, guid: 915a3135b53a6224eac61000a3053413, type: 3}
     - {fileID: 2800000, guid: 42c1395b8a7fd344f93c1d7fdffcda25, type: 3}
     - {fileID: 2800000, guid: 55f545137a921d54c9d5ba3f9eb18149, type: 3}
-  speed: 10
-  rotationSpeed: 30
+  Slides_Speed:
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  - 10
+  Slides_Rotation_Speed:
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
+  - 30
 --- !u!1001 &679331713
 PrefabInstance:
   m_ObjectHideFlags: 0
