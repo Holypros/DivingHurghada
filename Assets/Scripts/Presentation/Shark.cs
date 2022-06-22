@@ -11,7 +11,7 @@ public class Shark : MonoBehaviour
         
     }
 
-    int x = 0;
+    int x = 100;
     int i = 1;
     bool b = false;
     // Update is called once per frame
