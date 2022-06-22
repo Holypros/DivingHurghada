@@ -17,7 +17,8 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] Slide[] slide;
 
     int index = 0;
-    int speed = 10;
+    [SerializeField] int speed = 10;
+    [SerializeField] int rotationSpeed = 30;
     int[] counterSlides;
 
     void Start()
@@ -40,10 +41,8 @@ public class CameraMovement : MonoBehaviour
             index %= waypoints.Length;
         }
 
-        var step = speed * Time.deltaTime;
-
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, step * 3);
-        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, step);
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, rotationSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.D))
         {
