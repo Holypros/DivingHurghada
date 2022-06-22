@@ -23,7 +23,7 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] float[] Slides_Speed;
     [SerializeField] float[] Slides_Rotation_Speed;
-    int Counter_Slides_Speed = 0;
+    //int Counter_Slides_Speed = 0;
 
     void Start()
     {
