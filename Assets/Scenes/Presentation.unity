@@ -15352,6 +15352,7 @@ GameObject:
   - component: {fileID: 675480905}
   - component: {fileID: 675480904}
   - component: {fileID: 675480908}
+  - component: {fileID: 675480909}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -15537,29 +15538,53 @@ MonoBehaviour:
   - Img:
     - {fileID: 2100000, guid: 19863d77874a6aa4f9ecfb4a1bf6a278, type: 2}
   Slides_Speed:
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
-  - 10
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+  - 13
+--- !u!114 &675480909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675480903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d797cf9dd348be44f8f5e8a1ee437a3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints:
+  - {fileID: 1938992583}
+  - {fileID: 767806374}
+  - {fileID: 881495030}
+  - {fileID: 1250039618}
+  - {fileID: 2025075745}
+  - {fileID: 1887565943}
+  - {fileID: 1661964896}
+  - {fileID: 1913290032}
+  - {fileID: 211330910}
+  - {fileID: 2137682988}
+  - {fileID: 440166797}
   Slides_Rotation_Speed:
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
-  - 30
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
+  - 70
 --- !u!1001 &679331713
 PrefabInstance:
   m_ObjectHideFlags: 0

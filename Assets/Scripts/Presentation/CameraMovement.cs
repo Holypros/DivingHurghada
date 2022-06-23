@@ -17,18 +17,18 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] Slide[] slide;
 
     int index = 0;
-    //[SerializeField] int speed = 10;
-    //[SerializeField] int rotationSpeed = 30;
+//    [SerializeField] int speed = 10;
+//    [SerializeField] int rotationSpeed = 30;
     int[] counterSlides;
 
     [SerializeField] float[] Slides_Speed;
-    [SerializeField] float[] Slides_Rotation_Speed;
-    //int Counter_Slides_Speed = 0;
+//    [SerializeField] float[] Slides_Rotation_Speed;
+//    int Counter_Slides_Speed = 0;
 
     void Start()
     {
         counterSlides = new int[planes.Length];
-        //Counter_Slides_Speed = new int[planes.Length];
+//      Counter_Slides_Speed = new int[planes.Length];
 
     }
 
@@ -48,7 +48,7 @@ public class CameraMovement : MonoBehaviour
 
 //      transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, rotationSpeed * Time.deltaTime);
 //      transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, Slides_Rotation_Speed[index] * Time.deltaTime);
+//      transform.rotation = Quaternion.RotateTowards(transform.rotation, waypoints[index].rotation, Slides_Rotation_Speed[index] * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, waypoints[index].position, Slides_Speed[index] * Time.deltaTime);
 
         if (Input.GetKeyDown(KeyCode.D))
