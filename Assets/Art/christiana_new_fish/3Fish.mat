@@ -38,7 +38,7 @@ Material:
     - _AlphaCutoff: 0.5
     - _Amp: 2
     - _Speed: 1
-    - _WaveHeight: 0.3
+    - _WaveHeight: 0.514
     - _hightwave: 1
     m_Colors:
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
