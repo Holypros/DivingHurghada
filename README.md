@@ -8,4 +8,4 @@ Will be released on the playstore soon
 
 You can watch the Gameplay here: https://drive.google.com/file/d/1QAiizhOdu7cLxTb2HchSrmBFd4PgOwHj/view?usp=sharing
 
-You can Download and try the game here: https://drive.google.com/file/d/1fxYBNcCyoDu-fFP5vx4aUB_oh-Cg2KFR/view?usp=sharing
+You can Download and try the game here: https://drive.google.com/file/d/1pV_wXvSIyZLqBK4-p4865wB9eFoTrPdX/view?usp=sharing
