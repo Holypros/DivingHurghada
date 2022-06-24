@@ -16948,6 +16948,7 @@ MonoBehaviour:
     - {fileID: 2100000, guid: 71c0926c896726d4095e0140aeeb7fe7, type: 2}
   - Img:
     - {fileID: 2100000, guid: 19863d77874a6aa4f9ecfb4a1bf6a278, type: 2}
+    - {fileID: 2100000, guid: 7df2b17a70ff21c43b1b2c7772e00d1a, type: 2}
   Slides_Speed:
   - 15
   - 15
