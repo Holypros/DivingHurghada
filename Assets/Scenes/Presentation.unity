@@ -2427,12 +2427,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 119135942}
   m_PrefabAsset: {fileID: 0}
---- !u!23 &119135944 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8ff38a450d55db94daa952f683a8bb77,
-    type: 3}
-  m_PrefabInstance: {fileID: 119135942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &120000788
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2741,12 @@ Transform:
   m_Father: {fileID: 1306732350}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: -26.134, z: 0}
+--- !u!23 &134062264 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8ff38a450d55db94daa952f683a8bb77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2016074337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &135985346
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5504,6 +5504,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6483758785185172352, guid: 1addaa64e5f061249affdcba2a0932f4,
     type: 3}
   m_PrefabInstance: {fileID: 233558947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &247123828 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 8ff38a450d55db94daa952f683a8bb77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2135422803}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &249083094
 GameObject:
@@ -16892,11 +16898,11 @@ MonoBehaviour:
   - {fileID: 1654216647}
   - {fileID: 1242963560}
   - {fileID: 1929656739}
-  - {fileID: 0}
+  - {fileID: 134062264}
   - {fileID: 552689251}
   - {fileID: 1052293341}
   - {fileID: 1227969349}
-  - {fileID: 119135944}
+  - {fileID: 247123828}
   waypoints:
   - {fileID: 1938992583}
   - {fileID: 767806374}
